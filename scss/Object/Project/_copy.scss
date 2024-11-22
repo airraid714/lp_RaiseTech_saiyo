@@ -1,5 +1,39 @@
 @use "../../Foundation/_variable.scss" as *;
 
 .p-copy{
-    
+    margin-left: 18%;
+
+    &__text1{
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $green01;
+        background: $whiteFF;
+        border: 3px solid $green01;
+        padding: 12px 21px;
+        width: 446px;
+        margin-bottom: 24px;
+    }
+
+    &__text2{
+        width: 483px;
+        margin-bottom: 16px;
+        img{
+            width: 100%;
+        }
+    }
+
+    &__text3{
+        font-size: 24px;
+        font-weight: 500;
+        color: $green27;
+        line-height: 1.8;
+        margin-bottom: 26px;
+        span{
+            font-size: 3.2rem;
+            line-height: 1.5;
+            font-weight: 900;
+            text-decoration: underline 2px solid;
+            text-underline-offset: 5px; 
+        }
+    }
 }

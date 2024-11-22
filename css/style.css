@@ -155,11 +155,42 @@ p, a {
 }
 
 .p-first-view {
-  position: relative;
+  padding-top: 59px;
 }
-.p-first-view__button {
-  position: absolute;
-  left: 18%;
-  bottom: 0;
+
+.p-copy {
+  margin-left: 18%;
+}
+.p-copy__text1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #017972;
+  background: #FFFFFF;
+  border: 3px solid #017972;
+  padding: 12px 21px;
+  width: 446px;
+  margin-bottom: 24px;
+}
+.p-copy__text2 {
+  width: 483px;
+  margin-bottom: 16px;
+}
+.p-copy__text2 img {
+  width: 100%;
+}
+.p-copy__text3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #273236;
+  line-height: 1.8;
+  margin-bottom: 26px;
+}
+.p-copy__text3 span {
+  font-size: 3.2rem;
+  line-height: 1.5;
+  font-weight: 900;
+  -webkit-text-decoration: underline 2px solid;
+          text-decoration: underline 2px solid;
+  text-underline-offset: 5px;
 }
 /*# sourceMappingURL=style.css.map */
