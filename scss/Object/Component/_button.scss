@@ -1,0 +1,77 @@
+@use "../../Foundation/variable" as *;
+
+.c-button{
+
+    &--request{
+        display: block;
+        background: $green01;
+        color: $whiteFF;
+        display: flex;
+        align-items: center;
+
+        &--header{
+            @extend .c-button--request;
+            height: 53px;
+            width: 269px;
+            border-radius: 3.7px;
+            font-size: 1.7rem;
+            box-shadow: 0px -2.662px 0px 0px rgba(0, 0, 0, 0.25) inset;
+            p{
+                margin: auto 30px auto auto;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    background: url(../../../images/png/operator.png);
+                    background-size: cover;
+                    width:   72px;
+                    height:  64px;
+                    top:    -32px;
+                    left:   -86px;
+                    display: block;
+                }
+            }
+            span{
+                font-size: 1.1rem;
+            }
+        }
+
+        &--first-view{
+            @extend .c-button--request;
+            width: 398px; 
+            padding: 39px 34px 16px;
+            border-radius: 8px;
+            font-size: 3rem;
+            box-shadow: 0px -2.391px 0px 0px rgba(0, 0, 0, 0.25) inset;
+            p{
+                margin-left: auto;
+                position:   relative;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    background: url(../../../images/png/operator.png);
+                    background-size: cover;
+                    width: 112px;
+                    height: 102px;
+                    top: -46px;
+                    left: -118px;
+                    display: block;
+                }
+                &::after{
+                    position:absolute;
+                    content: "";
+                    background: url(../../../images/png/button-parts.png);
+                    background-size: cover;
+                    width: 254px;
+                    height: 25px;
+                    top: -28px;
+                    left: -13px;
+                }                
+            }
+            span{
+                font-size: 2.2rem;
+            }
+
+        }
+    }
+}

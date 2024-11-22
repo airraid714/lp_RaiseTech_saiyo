@@ -1,0 +1,42 @@
+// ブレークポイント
+//--------------------
+@mixin breakpoint($point){
+    @if $point == tablet {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @if $point == pc {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    }
+    @if $point == wp-pc {
+        @media (min-width: 782px) {
+            @content;
+        }
+    }
+}
+@include breakpoint(tablet){
+
+}
+@include breakpoint(pc){
+}
+
+//　カラー変数
+$whiteFF:    #FFFFFF;
+$green01:    #017972;
+$l-green9d:  #9DCBC8;
+$l-green35:  #35B3AC;
+$black:      #000000;
+$gray27:     #273236;
+$grayA8:     #A8A8A8;
+$grayc6:     #C6C6C6;
+$blue:       #1E4A8B;
+
+
+//
+
+// フォント変数
+$noto-jp:   "Noto Sans JP", serif;
+//

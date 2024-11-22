@@ -1,0 +1,11 @@
+@use "../../Foundation/variable" as *;
+
+.c-background{
+
+    &--first-view{
+        width: 100%;
+        height: 650px;
+        background: url(../../../images/jpg/main-visual.jpg);
+        background-size: cover;
+    }
+}

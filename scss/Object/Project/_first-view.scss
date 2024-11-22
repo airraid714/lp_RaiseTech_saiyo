@@ -1,0 +1,13 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.p-first-view{
+
+    position: relative;
+
+    
+    &__button{
+        position: absolute;
+        left: 18%;
+        bottom: 0;
+    }
+}

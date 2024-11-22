@@ -1,0 +1,18 @@
+@use "../../Foundation/_variable.scss"as *;
+
+.p-nav--global{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    li{
+        margin: 0 40px;
+    }
+
+    a{
+        color: $gray27;
+        font-size: 16px;
+    }
+    
+}

@@ -1,0 +1,42 @@
+@use "../Foundation/variable" as *;
+
+.l-header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    height: 112px;
+    border: 1px solid $grayA8;
+    
+    @include breakpoint(pc){
+        padding: 0 46px ;
+    }
+
+    &.is-open{
+        z-index: 6000000;
+    }
+
+    &__logo{
+
+        
+        display: block;
+        @include breakpoint(pc){
+            width: 216px;
+        }
+
+        img{
+            width: 100%;
+        }
+        p{
+            color: $black;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        
+    }
+
+
+}
