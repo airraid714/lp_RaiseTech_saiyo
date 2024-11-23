@@ -1,0 +1,65 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.p-service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content{
+        width: 988px;
+
+        h2,h3{
+            color: $whiteFF;
+
+        }
+        h2,h3{
+            text-align: center;
+        }
+        h2{
+            font-size: 4rem;
+            font-weight: 500;
+            font-style: normal;
+            position: relative;
+            margin-bottom: 64px;
+            letter-spacing: 1.2px;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 583px;
+                height: 6px;
+                background: $whiteFF;
+                bottom: -18px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        h3{
+            font-size: 3.2rem;
+            font-weight: 500;
+            margin-bottom: 36px;
+        }
+        &__text{
+            width: 804px;
+            font-size: 2.4rem;
+            margin: auto;
+            color: $whiteFF;
+            letter-spacing: 1.2px;
+            line-height: 1.5;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 756px;
+            margin: 0 auto 46px;
+
+            li{
+                width: 232px;
+                height: 232px;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

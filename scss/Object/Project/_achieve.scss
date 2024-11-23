@@ -1,0 +1,46 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.p-achieve{
+    h2{
+        font-size: 40px;
+        color: $green27;
+        text-align: center;
+        margin: 51px 0;
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 200px;
+            height: 8px;
+            background: $l-green9d;
+            bottom: -21px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+    &__list{
+        display: flex;
+        margin: 18px 0 47px;
+        flex-wrap: nowrap; /* 折り返しを防ぐ */
+        overflow-x: auto; /* 横スクロールを有効に */
+ 
+
+        &__item{
+            width: 240px;
+            height: 160px;
+            margin-left: 40px;
+            flex: 0 0 auto; /* 幅を固定 */
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+        }
+    }
+
+
+}

@@ -8,4 +8,12 @@
         background: url(../../../images/jpg/main-visual.jpg);
         background-size: cover;
     }
+
+    &--service{
+        width: 100%;
+        height: 956px;
+        background: url(../../../images/png/bg_service.png);
+        background-size: cover;
+        background-position: center;
+    }
 }

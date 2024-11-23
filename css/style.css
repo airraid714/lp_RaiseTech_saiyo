@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
   width: 100%;
@@ -23,7 +24,7 @@ a {
   text-decoration: none;
 }
 
-p, a {
+p, a, h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Sans JP", serif;
 }
 
@@ -66,6 +67,13 @@ p, a {
   height: 650px;
   background: url(../../../images/jpg/main-visual.jpg);
   background-size: cover;
+}
+.c-background--service {
+  width: 100%;
+  height: 956px;
+  background: url(../../../images/png/bg_service.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .c-button--request, .c-button--request--first-view, .c-button--request--header {
@@ -139,6 +147,102 @@ p, a {
 .c-hide {
   opacity: 0;
   visibility: hidden;
+}
+
+.p-service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-service__content {
+  width: 988px;
+}
+.p-service__content h2, .p-service__content h3 {
+  color: #FFFFFF;
+}
+.p-service__content h2, .p-service__content h3 {
+  text-align: center;
+}
+.p-service__content h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+  margin-bottom: 64px;
+  letter-spacing: 1.2px;
+}
+.p-service__content h2::after {
+  position: absolute;
+  content: "";
+  width: 583px;
+  height: 6px;
+  background: #FFFFFF;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.p-service__content h3 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 36px;
+}
+.p-service__content__text {
+  width: 804px;
+  font-size: 2.4rem;
+  margin: auto;
+  color: #FFFFFF;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+}
+.p-service__content ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 756px;
+  margin: 0 auto 46px;
+}
+.p-service__content ul li {
+  width: 232px;
+  height: 232px;
+}
+.p-service__content ul li img {
+  width: 100%;
+}
+
+.p-achieve h2 {
+  font-size: 40px;
+  color: #273236;
+  text-align: center;
+  margin: 51px 0;
+  position: relative;
+}
+.p-achieve h2::after {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 8px;
+  background: #9DCBC8;
+  bottom: -21px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.p-achieve__list {
+  display: flex;
+  margin: 18px 0 47px;
+  flex-wrap: nowrap; /* 折り返しを防ぐ */
+  overflow-x: auto; /* 横スクロールを有効に */
+}
+.p-achieve__list__item {
+  width: 240px;
+  height: 160px;
+  margin-left: 40px;
+  flex: 0 0 auto; /* 幅を固定 */
+}
+.p-achieve__list__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-nav--global {
