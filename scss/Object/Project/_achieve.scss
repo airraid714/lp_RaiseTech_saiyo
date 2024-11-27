@@ -1,11 +1,13 @@
 @use "../../Foundation/_variable.scss" as *;
 
 .p-achieve{
+    padding: 51px 0 47px;
+    
     h2{
         font-size: 40px;
         color: $green27;
         text-align: center;
-        margin: 51px 0;
+        margin-bottom: 51px;
         position: relative;
 
         &::after{
@@ -22,7 +24,7 @@
     }
     &__list{
         display: flex;
-        margin: 18px 0 47px;
+        margin-top: 18px;
         flex-wrap: nowrap; /* 折り返しを防ぐ */
         overflow-x: auto; /* 横スクロールを有効に */
  

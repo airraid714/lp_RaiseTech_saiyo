@@ -1,0 +1,79 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.c-obje{
+
+    &--problem{
+
+        width: 800px;
+        height: 120px;
+        background: $whiteFF;
+        padding: 10px 0;
+        border-radius: 10px;
+        margin: 73px auto 77px;
+        position: relative;
+        z-index: 11;
+
+
+        &::before{
+            transform: scale(-1, 1);
+            left: -125px;
+        }
+
+        &::after{
+            right: -125px;
+        }
+
+        &::before, &::after{
+            position: absolute;
+            content: "";
+            width: 106px;
+            height: 102px;
+            background: url(../../../images/svg/guruguru.svg);
+            background-size: cover;
+            top: 12px;
+        }
+
+        p{
+            color: $green27;
+            font-size: 40px;
+            text-align: center;
+
+            &::before{
+
+            }
+
+            span{
+                color: $green01;
+                font-size: 56px;
+                font-weight: 900;
+                position: relative;
+                z-index: 11;
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 148px;
+                    height: 8px;
+                    background: $l-green9d;
+                    bottom: -5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                
+            }
+        }
+
+        &__triangle{
+            width: 46px;
+            height: 46px;
+            background: $whiteFF;
+            position: absolute;
+            z-index: 10;
+            font-size: 0;
+            transform: rotate(45deg) translateX(-50%);
+            left: 50%;
+            bottom: -27px;
+            
+        }
+    }
+}

@@ -2,6 +2,14 @@
 
 .c-background{
 
+    &--global{
+        width: 100%;
+        height: auto;
+        background: url(../../../images/png/main-back.png);
+        background-repeat: repeat-y;
+        background-size: cover;
+    }
+
     &--first-view{
         width: 100%;
         height: 650px;
@@ -15,5 +23,16 @@
         background: url(../../../images/png/bg_service.png);
         background-size: cover;
         background-position: center;
+    }
+    
+    &--white{
+        background: $whiteFF;
+    }
+
+    &--problem{
+        width: 100%;
+        height: 577px;
+        background: url(../../../images/jpg/onayami.png);
+        background-size: cover;
     }
 }

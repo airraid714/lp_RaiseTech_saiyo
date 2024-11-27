@@ -31,14 +31,14 @@
 @use "object/Component/text.scss";
 @use "object/Component/title.scss";
 @use "object/Component/grid.scss";
-@use "object/Component/attend.scss";
+@use "object/Component/obje.scss";
 @use "object/Component/wrapper.scss";
 @use "object/Component/hide.scss";
  
 // ----------
 // Project
 // ----------
-@use "object/Project/top.scss";
+@use "object/Project/support.scss";
 @use "object/Project/service.scss";
 @use "object/Project/achieve.scss";
 @use "object/Project/card.scss";
@@ -52,6 +52,7 @@
 @use "object/Project/error.scss";
 @use "object/Project/first-view.scss";
 @use "object/Project/copy.scss";
+@use "object/Project/problem.scss";
 
 
 // ----------

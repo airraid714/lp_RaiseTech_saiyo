@@ -12,18 +12,24 @@ html{
 body{
     width: 100%;
     height: 100%;
-    // max-width: 1440px;
-
+    overflow-x: hidden;
 }
 img{
     vertical-align: bottom;
 }
 ul{
     list-style: none;
+    padding-inline-start: 0;
 }
 a{
     text-decoration: none;
 }
 p,a,h1,h2,h3,h4,h5,h6{
     font-family: $noto-jp;
+}
+*{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }

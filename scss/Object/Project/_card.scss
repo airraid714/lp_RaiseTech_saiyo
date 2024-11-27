@@ -1,0 +1,35 @@
+@use "../../Foundation/variable" as *;
+
+.p-card{
+
+
+    &--support{
+
+        color: $green27;
+        
+        h3{
+            font-size: 12rem;
+            color: $l-green9d;
+            font-weight: 900;
+            position: absolute;
+            line-height: 1.5;
+            letter-spacing: 1.3px;
+        }
+        h4{
+            font-size: 2.7rem;
+        }
+        strong{
+            font-size: 4rem;
+            letter-spacing: 2px;
+            line-height: 1.5;
+        }
+        p{
+            width: 423px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        
+        
+    }
+}
