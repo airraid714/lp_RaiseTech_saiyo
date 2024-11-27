@@ -1,0 +1,27 @@
+@use "../../Foundation/variable" as *;
+
+.p-cta{
+
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box{
+        width: 920px;     
+        
+        &__text{
+            font-size: 3.2rem;
+            color: $whiteFF;
+            font-weight: 500;
+            margin-bottom: 80px;
+    
+            span{
+                color: $l-green9d;
+                font-weight: 900;
+            }
+        }
+    
+    }
+
+
+}

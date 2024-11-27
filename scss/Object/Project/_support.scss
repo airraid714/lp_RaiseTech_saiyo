@@ -2,9 +2,9 @@
 
 .p-support{
 
-    padding: 82px 0;
+    padding: 82px 0 0;
 
-    ul{
+    &__list{
         margin-left: calc(129 / 1440 * 100%);
 
         li{
@@ -34,6 +34,68 @@
                     left: 30px;
                 }
             }
+        }
+    }
+
+    &__chat{
+
+        background: $whiteFF;
+        padding: 128px 0 85px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2{
+            color: $green27;
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            position: relative;
+            text-align: center;
+            margin-bottom: 90px;
+
+            &::after{
+                position: absolute;
+                content: "";
+                width: 192px;
+                height: 8px;
+                background: $l-green9d;
+                bottom: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        figure{
+            margin-bottom: 38px;
+        }
+
+        p{
+            font-size: 3.2rem;
+            width: 914px;
+            font-weight: 600;
+            letter-spacing: 1.6px;
+            
+            span{
+                color: $green01;
+                font-weight: 900;
+            }
+        }
+    }
+
+    &__banner{
+        height: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            font-size: 4rem;
+            font-weight: 600;
+            color: $whiteFF;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            width: 880px;
         }
     }
 }

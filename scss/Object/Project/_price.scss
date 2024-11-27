@@ -1,0 +1,37 @@
+@use "../../Foundation/variable" as *;
+
+.p-price{
+
+    padding: 72px 0 85px;
+
+    h2{
+        color: $green27;
+        font-size: 4rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 72px;
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 192px;
+            height: 8px;
+            background: $l-green9d;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    figure{
+        width: 920px;
+        height: 600px;
+        margin: auto;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
