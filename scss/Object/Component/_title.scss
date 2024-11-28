@@ -1,0 +1,11 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.c-title{
+
+    &--section{
+        color: $green27;
+        font-size: 4rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+}

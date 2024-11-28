@@ -1,0 +1,165 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.p-case{
+
+    padding: 98px 0 0;
+
+    h2{
+        text-align: center;
+        position: relative;
+        margin-bottom: 52px;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 192px;
+            height: 8px;
+            background: $l-green9d;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }    
+
+    &__jisseki{
+        width: 924px;
+        margin: 0 auto 56px;
+
+        &__img{
+            width: 100%;
+            height: 302px;
+            margin-bottom: 32px;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        p{
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: $green27;
+            line-height: 1.5;
+            letter-spacing: 1.2px;
+            
+            span{
+                font-weight: 400;
+                line-height: 2;
+            }
+        }
+    }
+
+    &__reason{
+
+        width: 1074px;
+        height: 844px;
+        background: $whiteFF;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+        margin: 0 auto 153px;
+        padding: 56px 0 46px;
+
+        p{
+            color: $green27;
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: 1.2px;
+            width: 872px;
+            margin: 0 auto 56px;
+
+            strong{
+                color: $green01;
+                font-size: 3.2rem;
+                font-weight: 900;
+                line-height: 1.5;
+                letter-spacing: 1.6px;
+            }
+        }
+
+        &__img{
+            width: 784px;
+            height: 346px;
+            margin: auto;
+
+            img{
+                width:  100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &__why{
+        width: 931px;
+        margin: 0 auto 38px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__text{
+
+            width: 670px;
+            color: $green01;
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: 1.6px;
+            margin-bottom: 32px;
+        }
+
+        ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 35px;
+            li{
+                width: 300px;
+                height: 268px;
+                padding: 33px;
+                border-radius: 5px;
+                background: #FFF;
+                box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+                h3{
+                    color: $green01;
+                    text-align: center;
+                    font-family: "Noto Sans JP";
+                    font-size: 2.4rem;
+                    font-weight: 900;
+                    line-height: 1.7;
+                    letter-spacing: 0.48px;
+                    margin-bottom: 20px;
+                }
+                p{
+                    color: $green27;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    line-height: 1.7;
+                    letter-spacing: 0.32px;
+                }
+            }
+
+        }
+
+        &__img{
+            margin-bottom: 56px;
+        }
+
+        &__accent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            
+            span{
+                display: block;
+                width: 118px;
+                height: 118px;
+                padding: 29px 35px;
+                color: $whiteFF;
+                font-size: 4.8rem;
+                font-weight: 900;
+                line-height: 1.25;
+                border-radius: 59px;
+                background: $green01;    
+            }
+        }
+    }
+
+}
