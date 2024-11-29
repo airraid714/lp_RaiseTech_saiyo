@@ -55,14 +55,15 @@
 @use "object/Project/problem.scss";
 @use "object/Project/cta.scss";
 @use "object/Project/case.scss";
+@use "object/Project/table.scss";
 
 
 // ----------
 // Utility
 // ----------
-@use "object/Utility/flex.scss";
+@use "object/Utility/invisible.scss";
 @use "object/Utility/margin.scss";
 @use "object/Utility/height.scss";
 @use "object/Utility/padding.scss";
-@use "object/Utility/width.scss";
+@use "object/Utility/flex.scss";
 
