@@ -1,0 +1,109 @@
+@use "../../Foundation/variable" as *;
+
+.p-form{
+
+    width: 920px;
+    margin: auto;
+
+    label, input{
+        color: $green27;
+        font-size: 3.2rem;
+        font-weight: 600;
+        line-height: 0.9;
+        width: 226px;
+        position: relative;
+    }
+    &__wrapper{
+
+        display: flex;
+        align-items: flex-end;
+        gap: 53px;
+        margin-bottom: 32px;
+
+        label{
+            &::before{
+                position: absolute;
+                content: "必須";
+                color: $whiteFF;
+                font-size: 1.6rem;
+                background: #D32F2F;
+                padding: 4px 8px;
+                top: -50px;
+                left: 0;
+            }    
+        }
+
+        input{
+            width: 640px;
+            height: 80px;
+            border: 3px solid #273236;
+            padding: 10px 20px;
+            
+
+        }
+
+    }
+
+    &__name{
+
+        display: flex;
+        justify-content: space-between;
+        width: 640px;
+        position: relative;
+
+        &::before,&::after{
+            position: absolute;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #273236;
+            top: 0;
+
+        }
+
+        &::before{
+            content: "姓";
+            left: -38px;
+        }
+        &::after{
+            content: "名";
+            right: 292px;
+        }
+
+
+
+        input{
+            width: 280px;
+            height: 80px;
+            border: 3px solid #273236;
+        
+        }
+
+    }
+    div .p-form__checkbox-container{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        margin-top: 80px;
+
+        input{
+            width: 35px;
+            height: 35px;
+        }
+
+        a{
+            color: $green27;
+            font-size: 2.8rem;
+            font-weight: 600;
+    
+        }
+    }
+    button{
+        margin: 152px auto 37px;
+    }
+
+    
+
+}

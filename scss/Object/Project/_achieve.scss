@@ -10,6 +10,7 @@
         margin-bottom: 51px;
         position: relative;
 
+
         &::after{
             position: absolute;
             content: "";
@@ -26,14 +27,14 @@
         display: flex;
         margin-top: 18px;
         flex-wrap: nowrap; /* 折り返しを防ぐ */
-        overflow-x: auto; /* 横スクロールを有効に */
+        gap: 40px;
  
 
         &__item{
             width: 240px;
             height: 160px;
-            margin-left: 40px;
             flex: 0 0 auto; /* 幅を固定 */
+            white-space: nowrap;
             
             img{
                 width: 100%;
@@ -43,6 +44,10 @@
             
         }
     }
-
+    &__wrapper{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
 
 }

@@ -1,0 +1,65 @@
+@use "../../Foundation/variable" as *;
+
+.p-skill{
+
+    padding: 98px 0 80px;
+    text-align: center;
+
+    &__content{
+
+        width: 920px;
+        padding: 51px 0;
+        margin: auto;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        &__item1{
+            margin-bottom: 68px;
+
+            h3{
+                margin-bottom: 27px;
+            }
+
+        }
+
+        &__item2{
+            display: flex;
+            justify-content: center;
+            gap: 67px;
+            margin-bottom: 68px;
+
+            h3{
+                margin-bottom: 17px;
+            }
+            
+            figure{
+                width: 351px;
+
+                img{
+                    width:100%;
+                }
+            }
+
+        }
+        
+        &__item3{
+            margin-bottom: 38px;
+            
+
+            h3{
+                margin-bottom: 38px;
+            }
+
+        }
+
+        &__item4{
+            color: $green27;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 125%; /* 15px */
+            text-align: end;
+            margin-right: 50px;
+        }
+        
+    }
+
+}

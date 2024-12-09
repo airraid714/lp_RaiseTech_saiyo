@@ -1,0 +1,50 @@
+@use "../Foundation/variable" as *;
+
+.l-footer{
+
+    background: $green01;
+    padding: 46px 27px 20px 100px;
+    height: 360px;
+    color: $whiteFF;
+    font-size: 2.4rem;
+    font-weight: 300;
+
+    &__logo{
+        width: 210px;
+        margin-bottom: 14px;
+
+        img{
+            width: 100%;
+        }
+        p{
+            font-size: 1.4rem;
+        }
+    }
+
+    a{
+        color: $whiteFF;
+        display: inline-block;
+        position: relative;
+        margin-left: 23px;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width:  30px;
+            height: 30px;
+            background: url(../images/svg/link_white.svg);
+            background-size: cover;
+            left: -32px;
+            top: 5px;
+        }
+    }
+
+    &__text1{
+        margin-bottom: 16px;
+    }
+    &__text2{
+        margin-top: 105px;
+        text-align: end;
+    }
+
+}

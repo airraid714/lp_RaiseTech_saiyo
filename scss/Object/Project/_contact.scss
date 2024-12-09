@@ -1,0 +1,24 @@
+@use "../../Foundation/variable" as *;
+
+.p-contact{
+
+    padding: 70px 0 142px;
+    
+
+    &__text1{
+        width: 600px;
+        margin: 0 auto 140px;
+        color: $green27;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    &__text2{
+        color: #575757;
+        font-size: 3.2rem;
+        font-weight: 600;
+        letter-spacing: 1.6px;
+        text-align: center;
+    }
+}

@@ -23,5 +23,8 @@
     
     }
 
-
+    &--add{
+        @extend .p-cta;
+        height: 325px;
+    }
 }

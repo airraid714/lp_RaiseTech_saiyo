@@ -1,0 +1,40 @@
+@use "../../Foundation/variable" as *;
+
+.p-flow{
+
+    padding: 105px 0 0 0;
+
+    &__content{
+
+        h3{
+            color: $green27;
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 31px;
+        }
+
+        &__item{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 27px;
+
+            figure{
+                width: 347px;
+    
+                img{
+                    width: 100%;
+                }
+            }
+            ul{
+                max-width: 545px;
+            }
+
+    
+        }
+    
+
+    }
+}

@@ -1,0 +1,53 @@
+@use "../../Foundation/variable" as *;
+
+.p-faq{
+
+    padding: 111px 0 81px;
+
+    h2{
+        margin-bottom: 111px;
+    }
+    
+    &__item{
+        max-width: 675px;
+        margin: 0 auto 28px;
+
+    }
+    &__question, &__answer{
+        padding: 31px 16px;
+        color: $green27;
+        font-size: 1.7rem;
+        font-weight: 700;
+
+
+    }
+    &__question{
+        border: 0.735px solid #017972;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        
+
+        button{
+            font-size: 0;
+            width: 58px;
+            height: 58px;
+            background: url(../images/svg/button_faq.svg);
+        }
+    }
+    &__answer{
+        background: #C7EEE7;;
+        border: 0.735px solid #C7EEE7;
+        max-height: 0; /* 初期状態で非表示 */
+        overflow: hidden;
+        transition:  0.5s ease; /* アニメーション効果 */
+        padding: 0 16px;
+
+        &.is-open{
+            max-height: 500px; /* 必要に応じて最大高さを調整 */
+            padding: 31px 16px;
+            transition:  0.5s ease; /* アニメーション効果 */
+        }
+    }
+}

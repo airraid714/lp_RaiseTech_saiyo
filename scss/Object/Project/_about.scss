@@ -1,0 +1,61 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.p-about{
+
+    padding: 41px 98px;
+
+    h2{
+        margin-bottom: 96px;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        figure{
+            width: 280px;
+            height: 280px;
+            margin-bottom: 8px;
+            img{
+                width: 100%;
+            }
+        }
+
+        p{
+            color: $green27;
+            font-size: 2.4rem;
+            font-weight: 600;
+            width:  166px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        ul{
+            width: 520px;
+            padding: 40px 0;
+            margin-bottom: 28px;
+            text-align: center;
+            border: 8px solid $l-green9d;
+            background: #FFF;
+            li{
+                color: $green27;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 200%;
+                letter-spacing: 1.2px;    
+            }
+
+            span{ 
+                color: #017972;
+            }
+        }
+        strong{
+            color: #017972;
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1.5; /* 36px */
+            letter-spacing: 1.2px;
+        }
+    }
+}

@@ -7,5 +7,30 @@
         font-size: 4rem;
         font-weight: 600;
         letter-spacing: 2px;
+
+        text-align: center;
+        position: relative;
+        margin-bottom: 52px;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 192px;
+            height: 8px;
+            background: $l-green9d;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }    
+
+    &--skill-h3{
+
+        color: $green27;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.25; 
     }
+    
+    
 }

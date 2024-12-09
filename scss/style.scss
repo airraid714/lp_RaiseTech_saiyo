@@ -34,6 +34,7 @@
 @use "object/Component/obje.scss";
 @use "object/Component/wrapper.scss";
 @use "object/Component/hide.scss";
+@use "object/Component/shadow.scss";
  
 // ----------
 // Project
@@ -43,12 +44,9 @@
 @use "object/Project/achieve.scss";
 @use "object/Project/card.scss";
 @use "object/Project/price.scss";
-@use "object/Project/profile.scss";
 @use "object/Project/contact.scss";
 @use "object/Project/form.scss";
-@use "object/Project/pager.scss";
 @use "object/Project/nav.scss";
-@use "object/Project/modal.scss";
 @use "object/Project/error.scss";
 @use "object/Project/first-view.scss";
 @use "object/Project/copy.scss";
@@ -56,6 +54,11 @@
 @use "object/Project/cta.scss";
 @use "object/Project/case.scss";
 @use "object/Project/table.scss";
+@use "object/Project/_skill.scss";
+@use "object/Project/_flow.scss";
+@use "object/Project/faq.scss";
+@use "object/Project/about.scss";
+
 
 
 // ----------

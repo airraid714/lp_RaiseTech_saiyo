@@ -1,0 +1,11 @@
+@use "../../Foundation/variable" as *;
+
+.u-margin{
+    
+    &--add-cta1{
+        margin: 110px 0;
+    }
+    &--add-cta2{
+        margin: 0;
+    }
+}

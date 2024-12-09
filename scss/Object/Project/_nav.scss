@@ -8,11 +8,32 @@
     
     li{
         margin: 0 40px;
-    }
 
-    a{
-        color: $gray27;
-        font-size: 16px;
+        a{
+            color: $gray27;
+            font-size: 16px;
+            display: inline-block;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -14px;
+                width: 0;
+                height: 6px;
+                background: $green01;
+                transition: width 0.3s ease;
+            }
+
+            &:hover::after{
+                width: 100%;
+            }
+        }
+    
     }
     
+
+    
+
 }

@@ -9,6 +9,7 @@
     z-index: 1000;
     height: 112px;
     border: 1px solid $grayA8;
+    padding: 0 47px;
     
     @include breakpoint(pc){
         padding: 0 46px ;
@@ -20,7 +21,7 @@
 
     &__logo{
 
-        
+        width: 216px;
         display: block;
         @include breakpoint(pc){
             width: 216px;

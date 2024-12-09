@@ -1,0 +1,17 @@
+@use "../../Foundation/variable" as *;
+
+.c-shadow{
+
+    &--text-flow1{
+        text-shadow: 0px 3.382px 3.382px #10E9DC;
+
+    }
+
+    &--text-flow2{
+        text-shadow: 0px 3.382px 3.382px rgba(12, 172, 162, 0.25);
+    }
+
+    &--text-flow3{
+        text-shadow: 0px 3.382px 3.382px rgba(31, 145, 138, 0.25);
+    }
+}

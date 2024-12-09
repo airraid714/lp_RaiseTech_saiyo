@@ -1,0 +1,13 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.c-text{
+
+    &--green04{
+        color: $green04;
+
+    }
+
+    &--pink39{
+        color: $pink39;
+    }
+}
