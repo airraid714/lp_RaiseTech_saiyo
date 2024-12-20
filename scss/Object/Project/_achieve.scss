@@ -2,27 +2,18 @@
 
 .p-achieve{
     padding: 51px 0 47px;
-    
-    h2{
-        font-size: 40px;
-        color: $green27;
-        text-align: center;
-        margin-bottom: 51px;
-        position: relative;
 
-
-        &::after{
-            position: absolute;
-            content: "";
-            width: 200px;
-            height: 8px;
-            background: $l-green9d;
-            bottom: -21px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    @include breakpoint(tablet){
+        padding: 28px 0 16px;
 
     }
+
+    h2{
+        @include breakpoint(tablet){
+            width: 304px;
+        }
+    }
+    
     &__list{
         display: flex;
         margin-top: 18px;
@@ -35,6 +26,11 @@
             height: 160px;
             flex: 0 0 auto; /* 幅を固定 */
             white-space: nowrap;
+
+            @include breakpoint(tablet){
+                width: 74px;
+                height: 50px;
+            }
             
             img{
                 width: 100%;

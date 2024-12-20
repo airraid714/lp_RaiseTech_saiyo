@@ -6,14 +6,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    @include breakpoint(tablet){
+        height: 258px;
+    }
     &__box{
-        width: 920px;     
+        width: 920px; 
+        
+        @include breakpoint(tablet){
+            width: 292px;
+        }
         
         &__text{
             font-size: 3.2rem;
             color: $whiteFF;
             font-weight: 500;
             margin-bottom: 80px;
+
+            @include breakpoint(tablet){
+                font-size: 1.4rem;
+                margin-bottom: 17px;
+            }
     
             span{
                 color: $l-green9d;
@@ -26,5 +39,16 @@
     &--add{
         @extend .p-cta;
         height: 325px;
+
+        @include breakpoint(tablet){
+            height: 120px;
+        }
+    }
+}
+.p-cta--first{
+    display: none;
+    @include breakpoint(tablet){
+        display: block;
+        padding-top: 16px;
     }
 }

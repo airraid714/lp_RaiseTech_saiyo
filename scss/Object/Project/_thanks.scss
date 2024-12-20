@@ -1,0 +1,104 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.p-thanks{
+
+    padding-top: 75px;
+
+    @include breakpoint(tablet){
+        padding-top: 100px;
+
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 65px;
+        margin-bottom: 41px;
+
+        @include breakpoint(tablet){
+            gap: 25px;
+            margin: 0 auto 62px;
+            width: 310px;
+            
+
+        }
+
+
+        p{
+            color: var(--, #273236);
+            font-family: "Noto Sans";
+            font-size: 3.6rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%; /* 54px */
+            letter-spacing: 1.8px;
+
+            @include breakpoint(tablet){
+                font-size: 1.5rem;
+            }
+        }
+        figure{
+            width: 186px;
+            height: 186px;
+
+            @include breakpoint(tablet){
+                width: 68px;
+                height: 68px;
+            }
+
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+            
+        }
+
+        .c-button--return{
+            width: 441px;
+            height: 87px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            @include breakpoint(tablet){
+                width: 310px;
+                height: 58px;
+                border-radius: 10px;
+            }
+
+            p::before{
+                position: absolute;
+                content: "";
+                width: 43px;
+                height: 46px;
+                background: url("../images/png/return.png") no-repeat;
+                background-size: contain;
+                left: 42px;
+                top: 20px;
+
+                @include breakpoint(tablet){
+                    width: 28px;
+                    height: 28px;
+                    left: 45px;
+                    top: 15px;
+                    
+                }
+            }
+            p{
+                margin-left: 55px;
+
+                @include breakpoint(tablet){
+                    font-size: 2.3rem;
+                    margin-left: 45px;;
+                    
+                }
+            }
+        }
+
+
+    }
+
+
+}

@@ -1,0 +1,9 @@
+@use "../Foundation/variable" as *;
+
+.l-main{
+
+    @include breakpoint(tablet){
+        padding-top: 60px;
+
+    }
+}

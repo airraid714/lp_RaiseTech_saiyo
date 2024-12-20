@@ -12,6 +12,7 @@
 @use "layout/footer.scss";
 @use "layout/header.scss";
 @use "layout/main.scss";
+@use "layout/_container.scss";
  
  
 // ---------------------------------
@@ -58,6 +59,10 @@
 @use "object/Project/_flow.scss";
 @use "object/Project/faq.scss";
 @use "object/Project/about.scss";
+@use "object/Project/scrollbar.scss";
+@use "object/Project/slider.scss";
+@use "object/Project/slick.scss";
+@use "object/Project/_thanks.scss";
 
 
 
@@ -66,7 +71,6 @@
 // ----------
 @use "object/Utility/invisible.scss";
 @use "object/Utility/margin.scss";
-@use "object/Utility/height.scss";
 @use "object/Utility/padding.scss";
 @use "object/Utility/flex.scss";
 

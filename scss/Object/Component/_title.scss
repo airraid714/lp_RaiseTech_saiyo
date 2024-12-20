@@ -10,7 +10,13 @@
 
         text-align: center;
         position: relative;
-        margin-bottom: 52px;
+        margin: 0 auto 52px;
+
+        @include breakpoint(tablet){
+            font-size: 1.8rem;
+            letter-spacing: 0;
+            margin: 0 auto 24px;
+        }
 
         &::after{
             position: absolute;
@@ -21,8 +27,20 @@
             bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
+
+            @include breakpoint(tablet){
+                width: 75px;
+                height: 3px;
+                bottom: -12px;
+            }
         }
-    }    
+        
+    } 
+    &--thanks{
+        @extend .c-title--section;
+        color: $green01;
+    }
+       
 
     &--skill-h3{
 

@@ -10,13 +10,24 @@
         font-weight: 700;
         line-height: 14.592px; /* 105.528% */
         letter-spacing: 0.691px;
-
         display: flex;
+
+
+        @include breakpoint(tablet){
+            font-size: 1rem;
+            line-height: 9px;
+
+            margin-left: 4.5px;
+        }
 
         &__column1{
 
             li:first-child{
                 height: 67px;
+
+                @include breakpoint(tablet){
+                    height: 47px;
+                }
             }
 
             li{
@@ -26,11 +37,21 @@
                 border-top: 1px solid $whiteFF;
                 border-bottom: 1px solid $whiteFF;
                 padding: 16.5px;
+
+                @include breakpoint(tablet){
+                    width: 132px;
+                    height: 43px;
+                    padding: 16px 13px;
+                }
             }
         }
 
         &__column2{
             margin-right: 7px;
+
+            @include breakpoint(tablet){
+                margin-right: 4.5px;
+            }
 
             li:first-child{
                 height: 67px;
@@ -40,10 +61,26 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
+                @include breakpoint(tablet){
+                    width: 186px;
+                    height: 47px;
+
+                }
+
+
+
                 figure{
                     width: 125px;
                     height: 37px;
                     margin: 0 auto;
+
+                    @include breakpoint(tablet){
+                        width: 79px;
+                        height: 18px;
+
+                    }
+    
 
                     img{
                         width: 100%;
@@ -53,6 +90,12 @@
                 p{
                     font-size: 0.75rem;
                     margin-top: -2px;
+
+                    @include breakpoint(tablet){
+                        font-size: 0.5rem;
+                        margin-top: 0;
+                    }
+    
                 }
             }
             
@@ -63,6 +106,13 @@
                 border-top: 1px solid #EDEFF3;
                 border-bottom: 1px solid #EDEFF3;
                 padding: 16.5px;
+
+                @include breakpoint(tablet){
+                    width: 186px;
+                    height: 43px;
+                    padding: 16px 13px;
+                }
+
                 
                 span{
                     font-size: 1rem;
@@ -73,6 +123,11 @@
         &__column3, &__column4{
 
             margin-right: 7px;
+
+            @include breakpoint(tablet){
+                margin-right: 4.5px;
+            }
+
             
             li:first-child{
                 height: 67px;
@@ -86,6 +141,13 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
+                @include breakpoint(tablet){
+                    width: 186px;
+                    height: 47px;
+
+                }
+
             }            
             li{
                 background: $whiteFF;
@@ -95,8 +157,19 @@
                 border-bottom: 1px solid #EDEFF3;
                 padding: 16.5px 0;
 
+                @include breakpoint(tablet){
+                    width: 186px;
+                    height: 43px;
+                    padding: 16px 13px;
+                }
+
+
                 span{
                     font-size: 1.2rem;
+
+                    @include breakpoint(tablet){
+                        font-size: 1rem;
+                    }
                 }
             }
 

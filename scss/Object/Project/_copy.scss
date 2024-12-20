@@ -1,39 +1,81 @@
 @use "../../Foundation/_variable.scss" as *;
 
 .p-copy{
-    margin-left: 18%;
+    margin: 0 0 0 18%;
+    position: relative;
+
+    @include breakpoint(tablet){
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(286/375*100%);
+    }
 
     &__text1{
+        text-align: center;
         font-size: 2.5rem;
         font-weight: 700;
         color: $green01;
         background: $whiteFF;
         border: 3px solid $green01;
         padding: 12px 21px;
-        width: 446px;
+        width: 100%;
+        max-width: 446px;
         margin-bottom: 24px;
+
+        @include breakpoint(tablet){
+            font-size: 1.5rem;
+            padding: 7px 12px;
+            border: 2px solid $green01;
+            margin-bottom: 9px;
+
+
+        }
+        
     }
 
     &__text2{
-        width: 483px;
+        max-width: 483px;
         margin-bottom: 16px;
+        width: 100%;
         img{
             width: 100%;
+        }
+        @include breakpoint(tablet){
+            margin-bottom: 9px;
         }
     }
 
     &__text3{
-        font-size: 24px;
+        font-size: 2.4rem;
         font-weight: 500;
         color: $green27;
         line-height: 1.8;
         margin-bottom: 26px;
+
+        @include breakpoint(tablet){
+            font-size: 1rem;
+        }
         span{
             font-size: 3.2rem;
             line-height: 1.5;
             font-weight: 900;
-            text-decoration: underline 2px solid;
             text-underline-offset: 5px; 
+            @include breakpoint(tablet){
+                font-size: 1.6rem;
+                line-height: 1.5;
+                text-decoration: underline 1px solid;
+                text-underline-offset: 3px; 
+
+            }
         }
+    }
+
+    .c-button--request--first-view{
+        @include breakpoint(tablet){
+            display: none;
+        }
+        
     }
 }

@@ -4,7 +4,12 @@
 
     padding: 105px 0 0 0;
 
+    @include breakpoint(tablet){
+        padding: 60px 0 0 0;
+    }
+
     &__content{
+
 
         h3{
             color: $green27;
@@ -12,6 +17,11 @@
             font-size: 4rem;
             font-weight: 700;
             margin-bottom: 31px;
+
+            @include breakpoint(tablet){
+                font-size: 1.4rem;
+                margin-bottom: 24px;
+            }
         }
 
         &__item{
@@ -21,8 +31,18 @@
             justify-content: center;
             gap: 27px;
 
+            @include breakpoint(tablet){
+                gap: 5px;
+
+            }
+
             figure{
-                width: 347px;
+                max-width: 347px;
+
+                @include breakpoint(tablet){
+                   width: 100px;
+                   height: 472px;
+                }
     
                 img{
                     width: 100%;

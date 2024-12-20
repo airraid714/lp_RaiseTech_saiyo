@@ -5,15 +5,38 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint(tablet){
+        background: $green01;
+        display: block;
+        padding: 25px 0 52px;
+        opacity: 0.95;
+        
+    }
+
     
     li{
         margin: 0 40px;
 
+        @include breakpoint(tablet){
+            height: 49px;
+            display: flex;
+            align-items: center;
+            margin: 0 30px;
+        }
+
+        
+
         a{
             color: $gray27;
-            font-size: 16px;
+            font-size: 1.6rem;
             display: inline-block;
             position: relative;
+
+            @include breakpoint(tablet){
+                color: $whiteFF;
+                font-size: 2rem;
+            }
 
             &::after{
                 content: "";
@@ -24,14 +47,42 @@
                 height: 6px;
                 background: $green01;
                 transition: width 0.3s ease;
+
+                @include breakpoint(tablet){
+                    display: none;
+                }
             }
 
             &:hover::after{
                 width: 100%;
             }
         }
+
+
     
     }
+    &__list1{
+        display: flex;
+        justify-content: space-between;
+
+        button{
+            margin-top: 5px;
+        }
+    }
+
+    &__logo{
+        display: block;
+        width: 127px;
+        
+        img{
+            width: 100%;
+        }
+        p{
+            font-size: 0.8rem;
+        }
+    }
+
+    
     
 
     

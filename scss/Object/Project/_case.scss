@@ -4,31 +4,22 @@
 
     padding: 98px 0 0;
 
-    h2{
-        text-align: center;
-        position: relative;
-        margin-bottom: 52px;
-
-        &::after{
-            position: absolute;
-            content: "";
-            width: 192px;
-            height: 8px;
-            background: $l-green9d;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }    
+    @include breakpoint(tablet){
+        padding: 70px 0 0;
+    }
 
     &__jisseki{
-        width: 924px;
+        max-width: 924px;
         margin: 0 auto 56px;
 
         &__img{
             width: 100%;
-            height: 302px;
-            margin-bottom: 32px;
+            // height: 302px;
+            margin: 0 auto 32px;
+
+            @include breakpoint(tablet){
+                width: 246px;
+            }
             img{
                 width: 100%;
                 object-fit: cover;
@@ -40,22 +31,38 @@
             color: $green27;
             line-height: 1.5;
             letter-spacing: 1.2px;
+
+            @include breakpoint(tablet){
+                font-size: 1.4rem;
+                width: 300px;
+                margin: auto;
+            }
             
             span{
                 font-weight: 400;
                 line-height: 2;
+
+                @include breakpoint(tablet){
+                    font-size: 1rem;
+                }
             }
         }
     }
 
     &__reason{
 
-        width: 1074px;
+        max-width: 1074px;
         height: 844px;
         background: $whiteFF;
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
         margin: 0 auto 153px;
         padding: 56px 0 46px;
+
+        @include breakpoint(tablet){
+            padding: 39px 0 ;
+            height: auto;
+            margin: 0 auto 73px;
+        }
 
         p{
             color: $green27;
@@ -63,8 +70,16 @@
             font-weight: 600;
             line-height: 1.5;
             letter-spacing: 1.2px;
-            width: 872px;
+            max-width: 872px;
             margin: 0 auto 56px;
+
+            @include breakpoint(tablet){
+                font-size: 1.4rem;
+                width: 300px;
+                letter-spacing: 0.7px;
+                margin: 0 auto 18px;
+
+            }
 
             strong{
                 color: $green01;
@@ -72,13 +87,20 @@
                 font-weight: 900;
                 line-height: 1.5;
                 letter-spacing: 1.6px;
+                @include breakpoint(tablet){
+                    font-size: 1.4rem;
+                }
+    
             }
         }
 
         &__img{
-            width: 784px;
-            height: 346px;
+            max-width: 784px;
             margin: auto;
+
+            @include breakpoint(tablet){
+                width: 332px;
+            }
 
             img{
                 width:  100%;
@@ -86,36 +108,70 @@
             }
         }
     }
+
     &__why{
-        width: 931px;
+        max-width: 931px;
         margin: 0 auto 111px;
         display: flex;
         flex-direction: column;
         align-items: center;
 
+        @include breakpoint(tablet){
+            margin: 0 auto 66px;
+        }
+
+        h2{
+            @include breakpoint(tablet){
+                width: 190px;
+                margin: 0 0 54px;
+            }
+        }
+
         &__text{
 
-            width: 670px;
+            max-width: 670px;
             color: $green01;
             font-size: 3.2rem;
             font-weight: 700;
             line-height: 1.5;
             letter-spacing: 1.6px;
             margin-bottom: 32px;
+
+            @include breakpoint(tablet){
+                font-size: 1.4rem;
+                letter-spacing: 0.7px;
+                width: 300px;
+            }
+
         }
 
         ul{
             width: 100%;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 118px;
             margin-bottom: 35px;
+            @include breakpoint(tablet){
+                gap: 9px;
+            }
+
             li{
-                width: 300px;
+                max-width: 300px;
                 height: 268px;
                 padding: 33px;
                 border-radius: 5px;
                 background: #FFF;
                 box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+
+                @include breakpoint(tablet){
+                    width: 152px;
+                    height: 197px;
+                    border-radius: 2.5px;
+                    padding: 12px;
+
+
+                }
+
                 h3{
                     color: $green01;
                     text-align: center;
@@ -125,6 +181,13 @@
                     line-height: 1.7;
                     letter-spacing: 0.48px;
                     margin-bottom: 20px;
+
+                    @include breakpoint(tablet){
+                        font-size: 1.6rem;
+                        margin-bottom: 10px;
+
+
+                    }
                 }
                 p{
                     color: $green27;
@@ -132,6 +195,10 @@
                     font-weight: 700;
                     line-height: 1.7;
                     letter-spacing: 0.32px;
+
+                    @include breakpoint(tablet){
+                        font-size: 1.2rem;
+                    }
                 }
             }
 
@@ -139,6 +206,16 @@
 
         &__img{
             margin-bottom: 56px;
+            width: 100%;
+
+            @include breakpoint(tablet){
+                width: 320px;
+                margin-bottom: 36px;
+            }
+
+            img{
+                width: 100%;
+            }
         }
 
         &__accent{
@@ -147,6 +224,10 @@
             align-items: center;
             gap: 24px;
             margin-bottom: 90px;
+
+            @include breakpoint(tablet){
+                margin-bottom: 55px;
+            }
             
             span{
                 display: block;
@@ -158,16 +239,31 @@
                 font-weight: 900;
                 line-height: 1.25;
                 border-radius: 59px;
-                background: $green01;    
+                background: $green01;   
+                
+                @include breakpoint(tablet){
+                    width: 75px;
+                    height: 75px;
+                    font-size: 3rem;
+                    padding: 20px 23px;
+                }
             }
         }
     }
+
     &__rt-student{
-        width: 777px;
+        max-width: 777px;
         height: 217px;
         background: $whiteFF;
         padding: 0 68px;
         margin-bottom: 38px;
+
+        @include breakpoint(tablet){
+            width: 308px;
+            height: 161px;
+            padding: 0 26px;
+            margin-bottom: 65px;
+        }
 
         h3{
             color: $green01;
@@ -178,6 +274,12 @@
             letter-spacing: 2px;
             margin-top: -37px;
             margin-bottom: 10px;
+
+            @include breakpoint(tablet){
+                font-size: 2rem;
+                margin-top: -37px;
+
+            }
         }
 
         p{
@@ -186,27 +288,63 @@
             font-weight: 700;
             line-height: 1.5; /* 36px */
             letter-spacing: 1.2px;
+
+            @include breakpoint(tablet){
+                font-size: 1.5rem;
+            }
         }
     }
+
     &__cost-cut{
-        width: 920px;
-        height: 600px;
+        max-width: 920px;
+        
+        @include breakpoint(tablet){
+            width: 320px;
+            margin: 0 auto;
+        }
+        // height: 600px;
 
         img{
             width: 100%;
             object-fit: cover;
         }
     }
+
     &__difference{
-        width: 916px;
+        max-width: 916px;
         margin: 0 auto 149px;
+
+        @include breakpoint(tablet){
+            margin: 0 auto 55px;
+        }
+
         &__caution{
-            width: 897px;
+            max-width: 897px;
             text-align: end;
             color: #000000;
             font-size: 1.4rem;
             font-weight: 400;
-            margin-top: 21px;
+            margin: 21px 0 0 0;
+
+            @include breakpoint(tablet){
+                font-size: 1rem;
+                text-align: left;
+                width: 300px;
+                margin: 25px auto 0;
+                position: relative;
+
+                &::after{
+                    position:  absolute;
+                    content: "";
+                    width: 79px;
+                    height: 12px;
+                    background: url(../images/svg/scroll.svg);
+                    background-size: cover;
+                    top: -15px;
+                    right: 5px;
+
+                }
+            }
         }
     }
 
@@ -215,8 +353,18 @@
         width: 100%;
         margin-bottom: 132px;
 
+        @include breakpoint(tablet){
+            padding: 45px 0;
+            margin-bottom: 70px;
+
+            h2{
+                margin-bottom: 31px;
+            }
+
+        }
+
         &__content{
-            width:  675px;
+            max-width:  675px;
             height: 758px;
             background: #FFF;
             box-shadow: 0px 3.214px 6.428px 0px rgba(0, 0, 0, 0.25);
@@ -229,10 +377,23 @@
             justify-content: center;
             align-items: center;
 
+            @include breakpoint(tablet){
+                width: 315px;
+                height: 482px;
+                gap: 13px;
+                margin: 0 auto 24px;
+            }
+
             figure{
                 width: 546px;
                 height: 266px;
                 margin-bottom: 20px;
+
+                @include breakpoint(tablet){
+                    width: 273px;
+                    height: 133px;
+                    margin: 0;
+                }
 
                 img{
                     width: 100%;
@@ -240,25 +401,51 @@
                 }
             }
             h3{
+                width: 546px;
                 font-size: 2.5rem;
                 margin-bottom: 20px;
+
+                @include breakpoint(tablet){
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.8rem;
+                    margin: 0;
+
+                }
             }
             p{
+                width: 546px;
                 font-size: 2rem;
+
+                @include breakpoint(tablet){
+                    width: 270px;
+                    font-size: 1.3rem;
+                    margin: 0;
+
+                }
 
                 span{
                     font-weight: 500;
+                    @include breakpoint(tablet){
+                        font-size: 1rem;
+                        display: block;
+                        margin-top: 20px;
+                    }
                 }
-            }
-            figure,h3,p{
-                width: 546px;
-
             }
         }
         &__art{
 
+            h3{
+                @include breakpoint(tablet){
+                    font-size: 1.3rem;
+                    letter-spacing: 0.65px;
+                    width: 295px;
+                }
+            }
+
             article{
-                width: 840px;
+                max-width: 840px;
                 display: flex;
                 flex-wrap: nowrap;
                 flex-direction: column;
@@ -272,14 +459,35 @@
                 line-height: 1.5; /* 36px */
                 letter-spacing: 1.2px;
 
+                @include breakpoint(tablet){
+                    width: 311px;
+                    font-size: 1rem;
+                    letter-spacing: 0.5px;
+
+                }
+
+
+            
+
                 div{
                     width: 100%;
                     height: 271px;
+
+                    @include breakpoint(tablet){
+                        height: 118px;
+                    }
+
                     
                     figure{
                         width: 198px;
                         height: 238px;
-    
+
+                        @include breakpoint(tablet){
+                            width: 73px;
+                            height: 85px;
+        
+                        }
+            
                         img{
                             width: 100%;
                         }
@@ -288,23 +496,32 @@
                     div{
                         width: 520px;
                         height: auto;
-
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
                         gap: 48px;
 
+                        @include breakpoint(tablet){
+                            width: 192px;
+                            gap: 0;
+                            line-height: 1.9;
+
+                        }
+
                         strong{
                             font-weight: 700;
+                            color: $green27
                         }
                         p{
                             font-weight: 400;
+                            color: #6B7274;
                         }
                         a{
                             color: $green27;
                             text-decoration: underline solid;
                             display: inline-block;
                             position: relative;
+
                             &::before{
                                 position: absolute;
                                 content: "";
@@ -314,6 +531,12 @@
                                 background-size: cover;
                                 left: -37px;
                                 top: 5px;
+
+                                @include breakpoint(tablet){
+                                    width: 12px;
+                                    height: 11px;
+                                    left: -16px;
+                                }
 
 
                             }
@@ -330,12 +553,30 @@
         width: 100%;
         height: 826px;
         padding: 40px 0;
+
+        @include breakpoint(tablet){
+            padding: 28px;
+            height: 416px;
+
+        }
+
         &__list{
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 40px;
             margin-top: 112px;
+            position: relative;
+
+            @include breakpoint(tablet){
+                // width: 220px;
+                overflow-x: hidden;
+                margin: auto;
+                gap: 22px
+
+            }
+
+
             &__item{
                 width: 320px;
                 height: 465px;
@@ -345,13 +586,44 @@
                 flex-direction: column;
                 align-items: center;
                 padding-top: 33px;
+
+                @include breakpoint(tablet){
+                    flex: 0 0 auto; /* 幅を固定 */
+
+                    
+                }
                 figure{
                     width: 262px;
                     height: 158px;
                     margin-bottom: 49px;
+                    position: relative;
+
+                    @include breakpoint(tablet){
+                        width: 148px;
+                        height: 88px;
+                        margin: 0 auto 27px;
+                    }
+
                     img{
                         width: 100%;
                         
+                    }
+
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        width: 108px;
+                        height: 8px;
+                        background: $l-green9d;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -30px;
+
+                        @include breakpoint(tablet){
+                            width: 60px;
+                            height: 3px;
+                            bottom: -16px;
+                        }
                     }
                 }
                 ul{
@@ -360,6 +632,13 @@
                     color: $green27;
                     font-size: 1.9rem;
                     font-weight: 500;
+
+                    @include breakpoint(tablet){
+                        width: 148px;
+                        margin: 0 auto;
+                        font-size: 1rem;
+
+                    }
                 }
             }
         }

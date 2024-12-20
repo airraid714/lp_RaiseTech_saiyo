@@ -3,15 +3,29 @@
 .p-contact{
 
     padding: 70px 0 142px;
+
+    @include breakpoint(tablet){
+        padding: 0 0 116px;
+
+        h2{
+            margin-bottom: 39px;
+        }
+    }
     
 
     &__text1{
-        width: 600px;
+        max-width: 600px;
         margin: 0 auto 140px;
         color: $green27;
         text-align: center;
         font-size: 4rem;
         font-weight: 600;
+
+        @include breakpoint(tablet){
+            font-size: 1.4rem;
+            width: 214px;
+            margin: 0 auto 43px;
+        }
     }
 
     &__text2{
@@ -20,5 +34,9 @@
         font-weight: 600;
         letter-spacing: 1.6px;
         text-align: center;
+
+        @include breakpoint(tablet){
+            font-size: 1.2rem;
+        }
     }
 }

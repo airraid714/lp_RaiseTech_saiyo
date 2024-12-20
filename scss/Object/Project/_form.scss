@@ -2,8 +2,12 @@
 
 .p-form{
 
-    width: 920px;
+    max-width: 920px;
     margin: auto;
+
+    @include breakpoint(tablet){
+        width: 308px;
+    }
 
     label, input{
         color: $green27;
@@ -12,6 +16,12 @@
         line-height: 0.9;
         width: 226px;
         position: relative;
+
+        @include breakpoint(tablet){
+            font-size: 1rem;
+            width: 74px;
+            
+        }
     }
     &__wrapper{
 
@@ -20,7 +30,12 @@
         gap: 53px;
         margin-bottom: 32px;
 
+        @include breakpoint(tablet){
+            gap: 24px;
+        }
+
         label{
+
             &::before{
                 position: absolute;
                 content: "必須";
@@ -30,6 +45,12 @@
                 padding: 4px 8px;
                 top: -50px;
                 left: 0;
+
+                @include breakpoint(tablet){
+                    font-size: 0.5rem;
+                    padding: 3px 3px 1px 4px;
+                    top: -14px;
+                }
             }    
         }
 
@@ -38,6 +59,13 @@
             height: 80px;
             border: 3px solid #273236;
             padding: 10px 20px;
+
+            @include breakpoint(tablet){
+                width: 208px;
+                height: 26px;
+                border: 1px solid #273236;
+                padding: 5px 8px;
+            }
             
 
         }
@@ -51,6 +79,10 @@
         width: 640px;
         position: relative;
 
+        @include breakpoint(tablet){
+            width: 208px;
+        }
+
         &::before,&::after{
             position: absolute;
             font-size: 2.4rem;
@@ -58,16 +90,31 @@
             color: #273236;
             top: 0;
 
+            @include breakpoint(tablet){
+                font-size: 0.7rem;
+            }
+
         }
 
         &::before{
             content: "姓";
             left: -38px;
+
+            @include breakpoint(tablet){
+                left: -14px;
+            }
+
         }
         &::after{
             content: "名";
             right: 292px;
+
+            @include breakpoint(tablet){
+                right: 100px;
+            }
+
         }
+
 
 
 
@@ -75,6 +122,12 @@
             width: 280px;
             height: 80px;
             border: 3px solid #273236;
+
+            @include breakpoint(tablet){
+                width: 94px;
+                height: 26px;
+                border: 1px solid #273236;
+            }
         
         }
 
@@ -88,20 +141,44 @@
         gap: 10px;
         margin-top: 80px;
 
+        @include breakpoint(tablet){
+            margin-top: 20px;
+            gap: 7px;
+        }
+
         input{
             width: 35px;
             height: 35px;
+
+            @include breakpoint(tablet){
+                width: 14px;
+                height: 14px;
+            }
         }
 
         a{
             color: $green27;
             font-size: 2.8rem;
             font-weight: 600;
+            text-decoration: underline;
+
+            @include breakpoint(tablet){
+                font-size: 1.2rem;
+            }
     
         }
     }
+    
     button{
         margin: 152px auto 37px;
+
+        @include breakpoint(tablet){
+            margin: 20px auto 9px;
+        }
+    }
+
+    input::placeholder{
+        color: #B3B3B3;
     }
 
     

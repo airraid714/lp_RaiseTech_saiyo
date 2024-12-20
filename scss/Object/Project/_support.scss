@@ -4,13 +4,29 @@
 
     padding: 82px 0 0;
     overflow-x: hidden;
+
+    @include breakpoint(tablet){
+        padding: 24px 0 0;
+    }
+
     &__list{
         margin-left: calc(129 / 1440 * 100%);
+        
+        @include breakpoint(tablet){
+            margin-left: 0;
+        }
 
         li{
-            width: 1030px;
+            max-width: 1030px;
             position: relative;
             margin-bottom: 90px;
+
+            @include breakpoint(tablet){
+                margin: auto;
+                width: 334px;
+
+
+            }
 
 
             img{
@@ -27,11 +43,37 @@
                 border-radius: 4px;
                 box-shadow: 0px 3.336px 3.336px 0px rgba(0, 0, 0, 0.25);
 
+                @include breakpoint(tablet){
+                    width: 305px;
+                    position: relative;
+                    padding: 24px 32px;
+                    margin: -10px auto 35px;
+                    bottom: auto;
+                    right: auto
+                }
+
 
                 h3{
                     position: absolute;
                     top: -100px;
                     left: 30px;
+
+                    @include breakpoint(tablet){
+                        top: 7%;
+                    }
+                }
+                h4{
+                    @include breakpoint(tablet){
+                        margin-left: 70px;
+                        margin-bottom: 3px;
+                    }
+                }
+                strong{
+                    @include breakpoint(tablet){
+                        display: block;
+                        margin-left: 70px;
+                        margin-bottom: 16px;
+                    }
                 }
             }
         }
@@ -45,6 +87,12 @@
         flex-direction: column;
         align-items: center;
 
+        @include breakpoint(tablet){
+            
+            padding: 64px 0 0;
+
+        }
+
         h2{
             color: $green27;
             font-size: 4rem;
@@ -53,6 +101,11 @@
             position: relative;
             text-align: center;
             margin-bottom: 90px;
+
+            @include breakpoint(tablet){
+                font-size: 1.8rem;
+                margin-bottom: 24px;
+            }
 
             &::after{
                 position: absolute;
@@ -63,11 +116,27 @@
                 bottom: -30px;
                 left: 50%;
                 transform: translateX(-50%);
+
+                @include breakpoint(tablet){
+                    width: 75px;
+                    height: 3px;
+                    bottom: -15px;
+                }
             }
         }
 
         figure{
             margin-bottom: 38px;
+
+            @include breakpoint(tablet){
+                width: 100%;
+
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+            }
         }
 
         p{
@@ -89,13 +158,25 @@
         align-items: center;
         justify-content: center;
 
+        @include breakpoint(tablet){
+            height: 93px;
+        }
+
         p{
             font-size: 4rem;
             font-weight: 600;
             color: $whiteFF;
             line-height: 1.5;
             letter-spacing: 2px;
-            width: 880px;
+            max-width: 880px;
+
+            @include breakpoint(tablet){
+                font-size: 1.4rem;
+                letter-spacing: 0.7px;
+                width: 313px;
+
+
+            }
         }
     }
 }

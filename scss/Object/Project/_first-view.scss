@@ -1,8 +1,15 @@
 @use "../../Foundation/_variable.scss" as *;
 
 .p-first-view{
-    padding-top: 59px;
+    
+    width: 100%;
+    max-height: 650px;
 
+    padding-top: 59px;
+    @include breakpoint(tablet){
+        padding-top: 20px;
+        aspect-ratio: 375 / 443; /* アスペクト比 */
+    }
     
    
 }

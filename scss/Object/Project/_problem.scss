@@ -4,6 +4,118 @@
 
     &__header{
 
+
+        &__content{
+
+            width: 800px;
+            height: 120px;
+            background: $whiteFF;
+            padding: 10px 0;
+            border-radius: 10px;
+            margin: 73px auto;
+            position: relative;
+            z-index: 11;
+
+            @include breakpoint(tablet){
+                width: 300px;
+                height: 50px;
+                margin: 27px auto;
+            }
+    
+    
+            &::before{
+                transform: scale(-1, 1);
+                left: -125px;
+                @include breakpoint(tablet){
+                    left: 10px;
+                }
+            }
+    
+            &::after{
+                right: -125px;
+                @include breakpoint(tablet){
+                    right: 14px;
+                }
+
+            }
+    
+            &::before, &::after{
+                position: absolute;
+                content: "";
+                width: 106px;
+                height: 102px;
+                background: url(../images/svg/guruguru.svg);
+                background-size: cover;
+                top: 12px;
+
+                @include breakpoint(tablet){
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+    
+            p{
+                color: $green27;
+                font-size: 4rem;
+                text-align: center;
+                font-weight: 600;
+                
+                @include breakpoint(tablet){
+                    font-size: 1.4rem;
+                }
+        
+                span{
+                    color: $green01;
+                    font-size: 56px;
+                    font-weight: 900;
+                    position: relative;
+                    z-index: 11;
+
+                    @include breakpoint(tablet){
+                        font-size: 2rem;
+                    }
+    
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 8px;
+                        background: $l-green9d;
+                        bottom: -5px;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                        @include breakpoint(tablet){
+                            height: 3px;
+                            bottom: -3px;
+                        }
+                    }
+                    
+                }
+            }
+    
+            div{
+                width: 46px;
+                height: 46px;
+                background: $whiteFF;
+                position: absolute;
+                z-index: 10;
+                font-size: 0;
+                transform: rotate(45deg) translateX(-50%);
+                left: 50%;
+                bottom: -27px;
+
+                @include breakpoint(tablet){
+                    width: 16px;
+                    height:  16px;
+                    bottom: -10px;
+                }
+                
+            }
+    
+
+        }
+
     }
     
     &__body{
@@ -12,14 +124,34 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        gap: 74px;
+        height: 577px;
+
+
+        @include breakpoint(tablet){
+
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            padding-right: 27px;
+            height: 360px;
+        }
+
         li{
             width: 258px;
             height: 180px;
             background: $whiteFF;
             border-radius: 4px;
-            margin: 0 37px;
             padding: 13px 0;
             text-align: center;
+            box-shadow: 0px 3.405px 3.405px 0px rgba(0, 0, 0, 0.25);
+
+            @include breakpoint(tablet){
+                width: 156px;
+                height: 100px;
+                padding: 7px 0;
+                box-shadow: 0px 1.898px 1.898px 0px rgba(0, 0, 0, 0.25);
+            }
             
 
             h4{
@@ -28,6 +160,11 @@
                 position: relative;
                 display: inline-block;
                 margin-bottom: 15px;
+                @include breakpoint(tablet){
+                    font-size: 2.2rem;
+                    margin-bottom: 6px;
+                }
+                
                 &::before{
                     width: 120%;
                     height: 6px;
@@ -36,6 +173,11 @@
                     content: "";
                     bottom: 0;
                     left: -5px;
+
+                    @include breakpoint(tablet){
+                        height: 3.7px;
+                        left: -2.5px;
+                    }
                 }
             }
 
@@ -43,7 +185,11 @@
                 color: $green27;
                 font-size: 20px;
                 font-weight: 600;
+                @include breakpoint(tablet){
+                    font-size: 1.2rem;
+                }
             }
+
         }
 
     }
@@ -51,16 +197,21 @@
     &__footer{
 
         &__top{
-            background: url(../../../images/png/flame_problem.png),no-repeat;
-            background-size: contain;
+            background: url(../images/png/flame_problem.png) no-repeat;
+            background-size: cover;
             width: 100%;
-            height: 157px;
+            // height: calc(100vw * 0.109); 
+            aspect-ratio: 1440 / 157;
+            max-height: 155px;
     
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
 
+            @include breakpoint(tablet){
+                aspect-ratio: 375 / 41;
+            }
 
             &::after{
                 position: absolute;
@@ -71,15 +222,26 @@
                 background-size: cover;
                 left: 50%;
                 transform: translateX(-50%);
-                bottom: -80%;
+                bottom: -115px;
+                
+                @include breakpoint(tablet){
+                    width: 32px;
+                    height: 41px;
+                    bottom: -33px;
+                }
             }
 
-    
             p{
                 font-size: 4.8rem;
                 color: $whiteFF;
                 letter-spacing: 2.4px;
                 margin-left: 46px;
+
+                @include breakpoint(tablet){
+                    font-size: 1.6rem;
+                    letter-spacing: 0.8px;
+                    margin-left: 0;
+                }
 
             }
         }
@@ -92,30 +254,52 @@
             justify-content: center;
             align-items: center;
 
+            @include breakpoint(tablet){
+                margin-top: 9px;
+                height: 75px;
+
+            }
+
             p{
                 display: inline-block;
                 font-size: 4.8rem;
                 color: $green27;
-                font-weight: 500;
+                font-weight: 600;
                 letter-spacing: 3.2px;
                 position: relative;
+
+                @include breakpoint(tablet){
+                    font-size: 1.5rem;
+                }
+
                 &::after{
                     position: absolute;
                     content: "";
                     width: 136px;
                     height: 145px;
-                    background: url(../../../images/png/light.png);
+                    background: url(../images/png/light.png);
                     background-size: cover;
                     top: 50%;
                     transform: translateY(-50%);
                     right: -120px;
+
+                    @include breakpoint(tablet){
+                        width: 45px;
+                        height: 45px;
+                        right: -35px;
+                    }
                 }
+                
                 span{
                     
                     font-size: 6.4rem;
                     color: $green01;
                     display: inline-block;
                     position: relative;
+                    @include breakpoint(tablet){
+                        font-size: 2.4rem;
+                    }
+
                     &::after{
                         position: absolute;
                         content: "";
@@ -124,6 +308,13 @@
                         background: $l-green9d;
                         bottom: -5px;
                         left:0;
+
+                        @include breakpoint(tablet){
+                            height: 4px;
+                            left: -1px;
+                            bottom: -3px;
+                        }
+    
                     }
                 }
             }

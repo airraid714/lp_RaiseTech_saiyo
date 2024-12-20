@@ -3,4 +3,22 @@
 .u-invisible{
 
     visibility: hidden;
+
+    &--sp{
+        display: none;
+
+        @include breakpoint(tablet){
+
+            display: block;
+        }
+    }
+
+    &--pc{
+        display: block;
+
+        @include breakpoint(tablet){
+
+            display: none;
+        }
+    }
 }

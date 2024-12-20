@@ -4,8 +4,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 124px 0;
+
+    @include breakpoint(tablet){
+        padding: 48px 0;
+    }
+
     &__content{
-        width: 988px;
+        max-width: 988px;
 
         h2,h3{
             color: $whiteFF;
@@ -14,47 +20,64 @@
         h2,h3{
             text-align: center;
         }
-        h2{
-            font-size: 4rem;
-            font-weight: 500;
-            font-style: normal;
-            position: relative;
-            margin-bottom: 64px;
-            letter-spacing: 1.2px;
+        .c-title--section{
+            margin: 0 auto 64px;
+            color: $whiteFF;
             &::after{
-                position: absolute;
-                content: "";
-                width: 583px;
-                height: 6px;
                 background: $whiteFF;
-                bottom: -18px;
-                left: 50%;
-                transform: translateX(-50%);
+            }
+
+            @include breakpoint(tablet){
+                width: 228px;
+                margin: 0 auto 24px;
             }
         }
         h3{
             font-size: 3.2rem;
             font-weight: 500;
-            margin-bottom: 36px;
+            margin: 0 auto 36px;
+
+            @include breakpoint(tablet){
+                font-size: 1.5rem;
+                margin: 0 auto 13px;
+                width: 180px;
+                
+            }
         }
         &__text{
-            width: 804px;
             font-size: 2.4rem;
             margin: auto;
             color: $whiteFF;
             letter-spacing: 1.2px;
             line-height: 1.5;
+
+            @include breakpoint(tablet){
+                font-size: 1.5rem;
+                width: 270px;
+                letter-spacing: 0.75px;
+            }
         }
         ul{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            width: 756px;
+            max-width: 756px;
             margin: 0 auto 46px;
+            gap: 30px;
+
+            @include breakpoint(tablet){
+                gap: 12px;
+                margin: 0 auto 24px;
+            }
 
             li{
                 width: 232px;
                 height: 232px;
+
+                @include breakpoint(tablet){
+                    width: 95px;
+                    height: 95px;
+                }
 
                 img{
                     width: 100%;

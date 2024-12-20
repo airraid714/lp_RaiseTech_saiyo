@@ -8,12 +8,16 @@
     position: relative;
     z-index: 1000;
     height: 112px;
-    border: 1px solid $grayA8;
-    padding: 0 47px;
-    
-    @include breakpoint(pc){
-        padding: 0 46px ;
+    padding: 0 3.5%;
+
+    @include breakpoint(tablet){
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        max-width: 500px;
+        padding: 0 16px;
     }
+    
 
     &.is-open{
         z-index: 6000000;
@@ -23,20 +27,68 @@
 
         width: 216px;
         display: block;
-        @include breakpoint(pc){
-            width: 216px;
+        @include breakpoint(tablet){
+            width: 106px;
         }
 
         img{
             width: 100%;
+
+            @include breakpoint(tablet){
+                margin-bottom: 4px;
+            }
         }
         p{
             color: $black;
             font-size: 14px;
             margin: 0;
+            @include breakpoint(tablet){
+                font-size: 0.7rem;
+            }
         }
 
         
+    }
+    div{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+    }
+    nav{
+        
+
+        @include breakpoint(tablet){
+            position: absolute;
+            width: 100%;
+            max-width: 500px;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s, visibility .3s;
+
+            &.is-open{
+                opacity: 1;
+                visibility: visible;
+                transition: opacity .3s, visibility .3s;
+            }
+        }
+
+    }
+
+    button{
+        display: none;
+
+        @include breakpoint(tablet){
+            display: block;
+        }
+
+    }
+
+    &--thanks{
+        @extend .l-header;
     }
 
 
