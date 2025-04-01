@@ -3,177 +3,320 @@
 .p-table{
 
     &--difference{
-
         color: $green27;
         text-align: center;
-        font-size: 1.4rem;
-        font-weight: 700;
-        line-height: 14.592px; /* 105.528% */
+        font-size: 1.3rem;
+        font-weight: 600;
         letter-spacing: 0.691px;
-        display: flex;
-
+        // width: 100%;
+        table-layout: fixed;
+        margin: auto;
+        position: relative;
+        border-spacing: 0;
+        overflow-x: hidden;
+        border-collapse: collapse;
 
         @include breakpoint(tablet){
-            font-size: 1rem;
-            line-height: 9px;
-
-            margin-left: 4.5px;
+            font-size: 0.8rem;
         }
+        
+        td{
+            padding: 12px 6px;
+            background: #EDEFF3;
 
-        &__column1{
-
-            li:first-child{
-                height: 67px;
-
-                @include breakpoint(tablet){
-                    height: 47px;
-                }
-            }
-
-            li{
-                background: #C7EEE7;
-                width: 241px;
-                height: 47px;
-                border-top: 1px solid $whiteFF;
-                border-bottom: 1px solid $whiteFF;
-                padding: 16.5px;
-
-                @include breakpoint(tablet){
-                    width: 132px;
-                    height: 43px;
-                    padding: 16px 13px;
-                }
-            }
         }
+        &__head{
 
-        &__column2{
-            margin-right: 7px;
-
-            @include breakpoint(tablet){
-                margin-right: 4.5px;
-            }
-
-            li:first-child{
-                height: 67px;
-                border-radius: 17px 17px 0 0;
-                background: linear-gradient(180deg, #AAE3E0 0%, #62D3CC 100%);
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+            td{
+                font-size: 2rem;
+                background: $grayB4;
+                width: 200px;
+                height: 95px; 
+                color: $whiteFF;
+                border-top: 4px solid #575757;
+                border-bottom: 4px solid #575757;
+                border-right: 3px solid #c7c7c7;
 
                 @include breakpoint(tablet){
-                    width: 186px;
-                    height: 47px;
-
+                    font-size: 1.1rem;
+                    width: 114px;
+                    height: 54px; 
+                    border-top: 2px solid #575757;
+                    border-bottom: 2px solid #575757;
+                    border-right: 1px solid #c7c7c7;
+    
                 }
 
+
+            }
+            td:first-child{
+                opacity: 0;
+                border: 0;
+            }
+            td:nth-child(2){
+                width: 263px;
+                position: relative;
+                background: $blue36;
+                border-top: 10px solid $redF4;
+                border-left: 10px solid $redF4;
+                border-bottom: 4px solid #575757;
+                border-right: 10px solid $redF4;
+
+                @include breakpoint(tablet){
+                    width: 150px;
+                    border-top: 5px solid $redF4;
+                    border-left: 5px solid $redF4;
+                    border-bottom: 2px solid #575757;
+                    border-right: 5px solid $redF4;
+    
+                }
+
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 102px;
+                    height: 77px;
+                    background: url(../images/png/crown.webp);
+                    background-size: cover;
+                    top: -70px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include breakpoint(tablet){
+
+                        width: 57px;
+                        height: 43px;
+                        top: -38px;
+    
+                    }
+
+                }
 
 
                 figure{
-                    width: 125px;
-                    height: 37px;
-                    margin: 0 auto;
+                    width: 143px;
+                    height: 62px;
+                    margin: auto;
 
                     @include breakpoint(tablet){
-                        width: 79px;
-                        height: 18px;
+                        width: 88px;
+                        height: 38px;
 
                     }
-    
-
                     img{
                         width: 100%;
-                        height: 100%;
+                    }
+                }
+            }
+            td:last-child{
+                border-right: 4px solid #575757;
+                @include breakpoint(tablet){
+                    border-right: 2px solid #575757;
+                }
+            }
+        }
+
+        &__content{
+
+            td{
+                height: 74px;
+                border-bottom: 3px solid #c7c7c7;
+                border-right: 3px solid #c7c7c7;
+
+                @include breakpoint(tablet){
+                    height: 41px;
+                    border-bottom: 1px solid #c7c7c7;
+                    border-right: 1px solid #c7c7c7;
+    
+                }
+
+                span{
+                    font-size: 1rem;
+                    @include breakpoint(tablet){
+                        font-size: 0.6rem;
                     }
                 }
                 p{
-                    font-size: 0.75rem;
-                    margin-top: -2px;
+                    margin: 6px auto 0;
 
-                    @include breakpoint(tablet){
-                        font-size: 0.5rem;
-                        margin-top: 0;
-                    }
-    
                 }
+                
+
             }
-            
-            li{
+            td:first-child{
+                border-left: 4px solid #575757;
+                font-size: 1.6rem;
+                background: #FFF9E8;
+                @include breakpoint(tablet){
+                    width: 138px;
+                    border-left: 2px solid #575757;
+                    font-size: 0.9rem;
+                    
+                }
+
+            }
+            td:nth-child(2){
+                color: $blue2b;
+                font-size: 3.2rem;
+                border-left: 10px solid $redF4;
+                border-right: 10px solid $redF4;
                 background: $whiteFF;
-                width: 241px;
-                height: 47px;
-                border-top: 1px solid #EDEFF3;
-                border-bottom: 1px solid #EDEFF3;
-                padding: 16.5px;
 
                 @include breakpoint(tablet){
-                    width: 186px;
-                    height: 43px;
-                    padding: 16px 13px;
+                    font-size: 1.8rem;
+                    border-left: 5px solid $redF4;
+                    border-right: 5px solid $redF4;
+    
                 }
 
                 
-                span{
-                    font-size: 1rem;
+
+                figure{
+
+                    img{
+                        width: 100%;
+                    }
+                }
+                
+                p{
+                    font-size: 1.2rem;
+                    color: $green27;
+                    width: 188px;
+                    font-weight: 700;
+                    @include breakpoint(tablet){
+                        width: auto;
+                        font-size: 0.6rem;
+                    }
+                }
+            
+            }
+            td:last-child{
+                border-right: 4px solid #575757;
+
+                @include breakpoint(tablet){
+                    border-right: 2px solid #575757;
+
                 }
             }
         }
+        &__last-row{
+            td{
+                background: $whiteFF;
+                height: 73px;
+                border-top: 4px solid #575757;
+                border-left: 3px solid #c7c7c7;
+                border-bottom: 4px solid #575757;
 
-        &__column3, &__column4{
+                @include breakpoint(tablet){
+                    border-top: 2px solid #575757;
+                    border-left: 1px solid #c7c7c7;
+                    border-bottom: 2px solid #575757;    
+                }
 
-            margin-right: 7px;
+            }
+            td:first-child{
+                font-size: 1.6rem;
+                color: $whiteFF;
+                background: $yellow;
+                border-left: 4px solid #575757;
 
-            @include breakpoint(tablet){
-                margin-right: 4.5px;
+                @include breakpoint(tablet){
+                    font-size: 1.1rem;
+                    border-left: 2px solid #575757;
+    
+                }
+
+
+            }
+            td:nth-child(2){
+                border-left: 10px solid $redF4;
+                border-right: 10px solid $redF4;
+                border-bottom: 10px solid $redF4;
+
+                @include breakpoint(tablet){
+                    border-left: 5px solid $redF4;
+                    border-right: 5px solid $redF4;
+                    border-bottom: 5px solid $redF4;
+    
+                }
+
+
+            }
+            td:last-child{
+                border-right: 4px solid #575757;
+
+                @include breakpoint(tablet){
+                    border-right: 2px solid #575757;
+                }
             }
 
             
-            li:first-child{
-                height: 67px;
-                border-radius: 17.284px 17.284px 0px 0px;
-                background: #B4B4B4;
-                padding: 0;
-                font-size: 2rem;
-                font-weight: 700;
-                color: #fff;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                @include breakpoint(tablet){
-                    width: 186px;
-                    height: 47px;
-
-                }
-
-            }            
-            li{
-                background: $whiteFF;
-                width: 200px;
-                height: 47px;
-                border-top: 1px solid #EDEFF3;
-                border-bottom: 1px solid #EDEFF3;
-                padding: 16.5px 0;
-
-                @include breakpoint(tablet){
-                    width: 186px;
-                    height: 43px;
-                    padding: 16px 13px;
-                }
+        }
 
 
-                span{
-                    font-size: 1.2rem;
 
-                    @include breakpoint(tablet){
-                        font-size: 1rem;
-                    }
-                }
-            }
-
-
+        
+    }
+    &__image-maru{
+        width: 40px;
+        margin: 0 auto;
+        @include breakpoint(tablet){
+            width: 25px;
+        }
+    
+        img{
+            width: 100%;
         }
     }
+    &__image-gray{
+        width: 30px;
+        margin: 0 auto;
+        @include breakpoint(tablet){
+            width: 20px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__image-price{
+    
+        &--1{
+            width: 100px;
+            margin: auto;
+
+            @include breakpoint(tablet){
+                width: 77px;
+            }
+
+            img{
+                width: 100%;
+            }
+        }  
+        
+        &--2{
+            width: 159px;
+            margin: auto;
+
+            @include breakpoint(tablet){
+                width: 90px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        &--3{
+            width: 110px;
+            margin: auto;
+
+            @include breakpoint(tablet){
+                width: 65px;
+            }
+
+            img{
+                width: 100%;
+            }
+        }
+        
+    }
+
+
 }

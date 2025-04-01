@@ -6,4 +6,12 @@
 
         border: 3px solid #A8A8A8;
     }
+
+    &--table-left{
+        border-top: 4px solid #575757;
+
+        @include breakpoint(tablet){
+            border-top: 2px solid #575757;
+        }
+    }
 }

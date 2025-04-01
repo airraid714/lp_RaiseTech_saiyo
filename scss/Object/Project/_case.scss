@@ -2,7 +2,7 @@
 
 .p-case{
 
-    padding: 98px 0 0;
+    padding: 125px 0 0;
 
     @include breakpoint(tablet){
         padding: 70px 0 0;
@@ -11,6 +11,10 @@
     &__jisseki{
         max-width: 924px;
         margin: 0 auto 56px;
+
+        @include breakpoint(tablet){
+            margin: 0 auto 112px;
+        }
 
         &__img{
             width: 100%;
@@ -41,9 +45,13 @@
             span{
                 font-weight: 400;
                 line-height: 2;
+               
 
                 @include breakpoint(tablet){
                     font-size: 1rem;
+                }
+                a{
+                    color: $green27;
                 }
             }
         }
@@ -55,13 +63,39 @@
         height: 844px;
         background: $whiteFF;
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
-        margin: 0 auto 153px;
+        border-radius: 70px;
+        margin: 0 auto 173px;
         padding: 56px 0 46px;
 
         @include breakpoint(tablet){
             padding: 39px 0 ;
             height: auto;
             margin: 0 auto 73px;
+            border-radius: 30px;
+        }
+
+        h2{
+            max-width: 380px;
+
+            &::before{
+                position: absolute;
+                content: "";
+                width: 104px;
+                height: 62px;
+                background: url(../../../images/png/coin-tower.webp);
+                background-size: cover;
+                top: 12px;
+                left: -126px;
+
+                @include breakpoint(tablet){
+                    width: 74px;
+                    height: 45px;
+                    top: -62px;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                }
+            }
         }
 
         p{
@@ -82,7 +116,7 @@
             }
 
             strong{
-                color: $green01;
+                color: $blue2b;
                 font-size: 3.2rem;
                 font-weight: 900;
                 line-height: 1.5;
@@ -121,6 +155,9 @@
         }
 
         h2{
+
+            margin: 0 auto 107px;
+
             @include breakpoint(tablet){
                 width: 190px;
                 margin: 0 0 54px;
@@ -130,12 +167,12 @@
         &__text{
 
             max-width: 670px;
-            color: $green01;
-            font-size: 3.2rem;
-            font-weight: 700;
+            color: $blue2b;
+            font-size: 2.4rem;
+            font-weight: 600;
             line-height: 1.5;
-            letter-spacing: 1.6px;
-            margin-bottom: 32px;
+            letter-spacing: 1.2px;
+            margin-bottom: 52px;
 
             @include breakpoint(tablet){
                 font-size: 1.4rem;
@@ -150,10 +187,48 @@
             display: flex;
             justify-content: center;
             gap: 118px;
-            margin-bottom: 35px;
+            margin-bottom: 80px;
+            position: relative;
             @include breakpoint(tablet){
                 gap: 9px;
             }
+
+            &::before, &::after{
+                position: absolute;
+                content: "";
+            }
+            &::before{
+                width: 191px;
+                height: 218px;
+                background: url(../../../images/png/why_reman-1.webp);
+                background-size: cover;
+                bottom: 0px;
+                left: -56px;
+                @include breakpoint(tablet){
+                    width: 44px;
+                    height: 50px;
+                    top: -35px;
+                    left: 85px;
+
+                }
+            }
+            &::after{
+                width: 191px;
+                height: 218px;
+                background: url(../../../images/png/why_reman-2.webp);
+                background-size: cover;
+                bottom: -52px;
+                right: -55px;
+
+                @include breakpoint(tablet){
+                    width: 60px;
+                    height: 56px;
+                    top: -39px;
+                    right: 75px;
+
+                }
+            }
+
 
             li{
                 max-width: 300px;
@@ -162,18 +237,19 @@
                 border-radius: 5px;
                 background: #FFF;
                 box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+                border-radius: 30px;
 
                 @include breakpoint(tablet){
                     width: 152px;
                     height: 197px;
-                    border-radius: 2.5px;
+                    border-radius: 10px;
                     padding: 12px;
 
 
                 }
 
                 h3{
-                    color: $green01;
+                    color: $blue2b;
                     text-align: center;
                     font-family: "Noto Sans JP";
                     font-size: 2.4rem;
@@ -202,6 +278,8 @@
                 }
             }
 
+
+
         }
 
         &__img{
@@ -209,7 +287,7 @@
             width: 100%;
 
             @include breakpoint(tablet){
-                width: 320px;
+                width: 350px;
                 margin-bottom: 36px;
             }
 
@@ -226,7 +304,7 @@
             margin-bottom: 90px;
 
             @include breakpoint(tablet){
-                margin-bottom: 55px;
+                margin-bottom: 70px;
             }
             
             span{
@@ -239,7 +317,7 @@
                 font-weight: 900;
                 line-height: 1.25;
                 border-radius: 59px;
-                background: $green01;   
+                background: $blue2b;   
                 
                 @include breakpoint(tablet){
                     width: 75px;
@@ -252,40 +330,51 @@
     }
 
     &__rt-student{
-        max-width: 777px;
-        height: 217px;
+        max-width: 820px;
+        height: 237px;
         background: $whiteFF;
         padding: 0 68px;
-        margin-bottom: 38px;
+        margin-bottom: 80px;
+        position: relative;
 
         @include breakpoint(tablet){
             width: 308px;
             height: 161px;
-            padding: 0 26px;
+            padding: 26px;
             margin-bottom: 65px;
         }
 
-        h3{
-            color: $green01;
-            text-align: center;
-            font-size: 4.0rem;
-            font-weight: 700;
-            line-height: 1.75; 
-            letter-spacing: 2px;
-            margin-top: -37px;
-            margin-bottom: 10px;
+        &::after{
+            position:absolute;
+            content: "";
+            width: 146px;
+            height: 200px;
+            background: url(../images/png/recomen.webp);
+            background-size: cover;
+            top: -197px;
+            right: 30px;
 
             @include breakpoint(tablet){
-                font-size: 2rem;
-                margin-top: -37px;
+                width: 45px;
+                height: 64px;
+                top: -50px;
+            }
+        }
 
+        h3{
+            width: calc(307 / 841 * 100%);
+            margin: -60px auto 23px;
+
+            @include breakpoint(tablet){
+                width: 55%;
+                margin: -67px auto 6px;
             }
         }
 
         p{
             color: $green27;
             font-size: 24px;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.5; /* 36px */
             letter-spacing: 1.2px;
 
@@ -295,36 +384,139 @@
         }
     }
 
-    &__cost-cut{
-        max-width: 920px;
-        
-        @include breakpoint(tablet){
-            width: 320px;
-            margin: 0 auto;
-        }
-        // height: 600px;
+    .c-obje--triangle{
 
-        img{
+        margin-bottom: 40px;
+        font-size: 0;
+
+        @include breakpoint(tablet){
+            border-right: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-top: 60px solid #2BB8D9;
+    
+        }
+    }
+    &__costcut{
+        width: 100%;
+        max-width: 1440px;
+
+        @include breakpoint(tablet){
+            background: $whiteFF;
+            margin: 0 auto;
+            padding-top: 40px;
+            
+        }
+
+        &__accent{
+            width: 76%;
+            max-width: 1093px;
+            position: sticky;
+            margin: 0 auto -50px;
+
+            @include breakpoint(tablet){
+                margin: 0 auto -20px;
+                width: 90%;
+
+            }
+        }
+
+        &__img{
             width: 100%;
-            object-fit: cover;
+
+            @include breakpoint(tablet){
+                width: 320px;
+                margin: 0 auto;
+            }
+        }
+        
+        figure{
+
+            @include breakpoint(tablet){
+                
+            }
+
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 
     &__difference{
-        max-width: 916px;
+        width: 90%;
+        max-width: 1296px;
         margin: 0 auto 149px;
+        padding-top: 224px;
 
         @include breakpoint(tablet){
             margin: 0 auto 55px;
+            padding-top: 82px;
+
+        }
+
+        h2{
+            width: 465px;
+            margin: 0 auto 83px;
+            position: relative;
+            @include breakpoint(tablet){
+                width: 200px;
+                margin: 0 auto 33px;
+            }
+
+            &::before{
+                position: absolute;
+                content: "";
+                width: 298px;
+                height: 280px;
+                background: url(../images/png/find-woman.webp);
+                background-size: cover;
+                top: -78px;
+                right: -285px;
+
+                @include breakpoint(tablet){
+                    width: 100px;
+                    height: 83px;
+                    top: -37px;
+                    right: -95px;
+                }
+            }
+        }
+        &__text{
+            max-width: 650px;
+            margin: 0 auto 75px;
+            font-weight: 600;
+            color: $green27;
+            
+            @include breakpoint(tablet){
+                width: 280px;
+                margin: 0 auto 28px;
+
+            }
+
+            p{
+                font-size: 2.4rem;
+
+                @include breakpoint(tablet){
+                    font-size: 1.1rem;
+                }
+
+            }
+            span{
+                font-size: 1.3rem;
+
+                @include breakpoint(tablet){
+                    font-size: 0.85rem;
+                }
+            }
         }
 
         &__caution{
-            max-width: 897px;
+            max-width: 1090px;
             text-align: end;
             color: #000000;
             font-size: 1.4rem;
             font-weight: 400;
-            margin: 21px 0 0 0;
+            margin: 21px auto 0;
 
             @include breakpoint(tablet){
                 font-size: 1rem;
@@ -346,16 +538,21 @@
                 }
             }
         }
+        .js-scrollbar{
+            width: 100%;
+        }
     }
 
     &__iret{
-        padding: 80px 0 ;
+        padding: 90px 0 ;
         width: 100%;
         margin-bottom: 132px;
+        border-radius: 70px;
 
         @include breakpoint(tablet){
             padding: 45px 0;
             margin-bottom: 70px;
+            border-radius: 30px;
 
             h2{
                 margin-bottom: 31px;
@@ -364,24 +561,27 @@
         }
 
         &__content{
-            max-width:  675px;
-            height: 758px;
+            max-width:  866px;
+            padding: 130px 80px;
             background: #FFF;
             box-shadow: 0px 3.214px 6.428px 0px rgba(0, 0, 0, 0.25);
             color: $green27;
             font-weight: 700;
             margin: 0 auto 82px;
-
+            border-radius: 70px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
             @include breakpoint(tablet){
+                padding: 0;
                 width: 315px;
                 height: 482px;
                 gap: 13px;
                 margin: 0 auto 24px;
+                border-radius: 30px;
+
             }
 
             figure{
@@ -553,12 +753,42 @@
         width: 100%;
         height: 826px;
         padding: 40px 0;
+        border-radius: 70px;
 
         @include breakpoint(tablet){
             padding: 28px;
             height: 416px;
+            border-radius: 30px;
 
         }
+
+        .slick-list{
+
+            @include breakpoint(tablet){
+                width: 210px;
+            }
+        
+        }
+        .slick-slide{
+            
+            @include breakpoint(tablet){
+                width: 210px;
+                height: 260px;
+                padding-top: 18px;
+                margin: 0 12px 0;
+        
+                
+            }
+        
+        }
+        .slick-prev,.slick-next{
+            display: none;
+            @include breakpoint(tablet){
+                display: block;            
+            }
+        
+        }
+        
 
         &__list{
             display: flex;

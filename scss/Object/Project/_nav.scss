@@ -5,21 +5,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
 
-    @include breakpoint(tablet){
-        background: $green01;
+    @include breakpoint(pc){
+        background: #2BB8D9;
         display: block;
         padding: 25px 0 52px;
         opacity: 0.95;
         
     }
-
     
     li{
-        margin: 0 40px;
 
-        @include breakpoint(tablet){
-            height: 49px;
+        @include breakpoint(pc){
+            height: 57px;
             display: flex;
             align-items: center;
             margin: 0 30px;
@@ -30,10 +29,11 @@
         a{
             color: $gray27;
             font-size: 1.6rem;
+            font-weight: 600;
             display: inline-block;
             position: relative;
 
-            @include breakpoint(tablet){
+            @include breakpoint(pc){
                 color: $whiteFF;
                 font-size: 2rem;
             }
@@ -45,7 +45,7 @@
                 bottom: -14px;
                 width: 0;
                 height: 6px;
-                background: $green01;
+                background: #2BB8D9;
                 transition: width 0.3s ease;
 
                 @include breakpoint(tablet){
@@ -72,19 +72,16 @@
 
     &__logo{
         display: block;
-        width: 127px;
+        width: 100px;
+        height: 100%;
         
         img{
             width: 100%;
         }
         p{
-            font-size: 0.8rem;
+            font-size: 1rem;
+            text-align: center;
         }
     }
-
-    
-    
-
-    
 
 }

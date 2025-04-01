@@ -2,12 +2,18 @@
 //--------------------
 @mixin breakpoint($point){
     @if $point == tablet {
-        @media (max-width: 1024px) {
+        @media (max-width: 1023px) {
             @content;
         }
     }
     @if $point == sp {
         @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @if $point == pc {
+
+        @media (max-width: 1170px){
             @content;
         }
     }
@@ -17,20 +23,29 @@
 }
 @include breakpoint(sp){
 }
+@include breakpoint(pc){
+    
+}
 
 //　カラー変数
 $whiteFF:    #FFFFFF;
 $green01:    #017972;
 $green27:    #273236;
 $green04:    #04756F;
-$l-green9d:  #9DCBC8;
+$l-green9d:  #84C8D8;;
 $l-green35:  #35B3AC;
 $black:      #000000;
 $gray27:     #273236;
 $grayA8:     #A8A8A8;
 $grayc6:     #C6C6C6;
+$grayB4:     #B4B4B4;
 $blue:       #1E4A8B;
 $pink39:     #E39393;
+$blue2b:     #2BB8D9;
+$blue36:     #36D2F6;
+$light-blue: #CCF5FF;
+$yellow:     #FFA01C;
+$redF4:      #F42162;
 
 
 //

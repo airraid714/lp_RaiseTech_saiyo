@@ -5,17 +5,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 1000;
-    height: 112px;
+    position: fixed;
+    height: 80px;
+    width: 100%;
     padding: 0 3.5%;
+    background: $whiteFF;
+    z-index: 1000000;
 
     @include breakpoint(tablet){
-        width: 100%;
         height: 60px;
-        position: fixed;
         max-width: 500px;
         padding: 0 16px;
+
     }
     
 
@@ -25,43 +26,45 @@
 
     &__logo{
 
-        width: 216px;
+        width: 122px;
         display: block;
         @include breakpoint(tablet){
-            width: 106px;
+            width: 82px;
         }
 
         img{
             width: 100%;
 
-            @include breakpoint(tablet){
-                margin-bottom: 4px;
-            }
         }
         p{
             color: $black;
-            font-size: 14px;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.9px;
             margin: 0;
+            text-align: center;
             @include breakpoint(tablet){
-                font-size: 0.7rem;
+                font-size: 0.5rem;
             }
         }
 
         
     }
     div{
-        display: flex;
-        align-items: center;
-        gap: 20px;
+        @include breakpoint(tablet){
+            display: flex;
+            align-items: center;
+            gap: 20px;
+    
+        }
 
     }
     nav{
-        
 
-        @include breakpoint(tablet){
+        @include breakpoint(pc){
             position: absolute;
             width: 100%;
-            max-width: 500px;
+            // max-width: 500px;
             left: 0;
             top: 0;
             z-index: 100;
@@ -81,7 +84,7 @@
     button{
         display: none;
 
-        @include breakpoint(tablet){
+        @include breakpoint(pc){
             display: block;
         }
 
@@ -89,6 +92,7 @@
 
     &--thanks{
         @extend .l-header;
+        background: transparent;
     }
 
 

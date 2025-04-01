@@ -2,58 +2,54 @@
 
 .p-flow{
 
-    padding: 105px 0 0 0;
+    padding: 140px 0 0 0;
+    border-radius: 70px;
+
 
     @include breakpoint(tablet){
-        padding: 60px 0 0 0;
+        padding: 80px 17px 20px 17px;
+        border-radius: 30px;
     }
+
+    h2{
+        color: $whiteFF;
+    }
+
 
     &__content{
 
+        padding: 0 118px;
+        @include breakpoint(tablet){
+            padding: 0;
+        }
+
 
         h3{
-            color: $green27;
+            color: $whiteFF;
             text-align: center;
-            font-size: 4rem;
+            font-size: 2.4rem;
             font-weight: 700;
             margin-bottom: 31px;
 
             @include breakpoint(tablet){
-                font-size: 1.4rem;
-                margin-bottom: 24px;
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+
+        }
+
+        figure{
+            max-width: 1204px;
+            width: 100%;
+            margin: auto;
+            img{
+                width: 100%;
             }
         }
 
-        &__item{
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 27px;
-
-            @include breakpoint(tablet){
-                gap: 5px;
-
-            }
-
-            figure{
-                max-width: 347px;
-
-                @include breakpoint(tablet){
-                   width: 100px;
-                   height: 472px;
-                }
-    
-                img{
-                    width: 100%;
-                }
-            }
-            ul{
-                max-width: 545px;
-            }
 
     
-        }
+        
     
 
     }

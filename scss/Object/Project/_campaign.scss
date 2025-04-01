@@ -1,0 +1,15 @@
+@use "../../Foundation/variable" as *;
+
+.p-campaign{
+    background-color: $whiteFF;
+
+    img{
+        border-radius: 100px 100px 0 0;
+
+        @include breakpoint(tablet){
+    
+            border-radius: 23px 23px 0 0;
+        }
+    
+    }
+}

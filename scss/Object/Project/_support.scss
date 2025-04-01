@@ -9,79 +9,23 @@
         padding: 24px 0 0;
     }
 
-    &__list{
-        margin-left: calc(129 / 1440 * 100%);
-        
-        @include breakpoint(tablet){
-            margin-left: 0;
+    &__content{
+        width: 100%;
+        max-width: 1326px;
+        margin: 0 auto 137px;
+
+        img{
+            width: 100%;
         }
 
-        li{
-            max-width: 1030px;
-            position: relative;
-            margin-bottom: 90px;
-
-            @include breakpoint(tablet){
-                margin: auto;
-                width: 334px;
-
-
-            }
-
-
-            img{
-                width: 100%;
-                object-fit: cover;
-            }
-
-            div{
-                width: 700px;
-                padding: 57px 0 25px 33px;
-                position: absolute;
-                bottom: 87px;
-                right: -330px;
-                border-radius: 4px;
-                box-shadow: 0px 3.336px 3.336px 0px rgba(0, 0, 0, 0.25);
-
-                @include breakpoint(tablet){
-                    width: 305px;
-                    position: relative;
-                    padding: 24px 32px;
-                    margin: -10px auto 35px;
-                    bottom: auto;
-                    right: auto
-                }
-
-
-                h3{
-                    position: absolute;
-                    top: -100px;
-                    left: 30px;
-
-                    @include breakpoint(tablet){
-                        top: 7%;
-                    }
-                }
-                h4{
-                    @include breakpoint(tablet){
-                        margin-left: 70px;
-                        margin-bottom: 3px;
-                    }
-                }
-                strong{
-                    @include breakpoint(tablet){
-                        display: block;
-                        margin-left: 70px;
-                        margin-bottom: 16px;
-                    }
-                }
-            }
+        @include breakpoint(tablet){
+            width: 337px;
+            margin: 0 auto ;
         }
     }
 
     &__chat{
 
-        background: $whiteFF;
         padding: 128px 0 85px;
         display: flex;
         flex-direction: column;
@@ -126,8 +70,11 @@
         }
 
         figure{
-            margin-bottom: 38px;
+            width: 964px;
 
+            img{
+                width: 100%;
+            }
             @include breakpoint(tablet){
                 width: 100%;
 
@@ -144,9 +91,9 @@
             width: 914px;
             font-weight: 600;
             letter-spacing: 1.6px;
-            
+            color: $green27;
             span{
-                color: $green01;
+                color: $blue2b;
                 font-weight: 900;
             }
         }
@@ -157,15 +104,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-radius: 0px 0px 70px 70px;
 
         @include breakpoint(tablet){
             height: 93px;
+            border-radius: 0px 0px 19px 19px;
+
         }
 
         p{
             font-size: 4rem;
             font-weight: 600;
-            color: $whiteFF;
+            color: $green27;
             line-height: 1.5;
             letter-spacing: 2px;
             max-width: 880px;

@@ -2,29 +2,58 @@
 
 .p-contact{
 
-    padding: 70px 0 142px;
+    padding: 170px 0 142px;
 
     @include breakpoint(tablet){
-        padding: 0 0 116px;
+        padding: 80px 0 116px;
 
-        h2{
-            margin-bottom: 39px;
+    }
+    h2{
+        max-width: 640px;   
+        margin: 0 auto 11px;
+
+        @include breakpoint(tablet){
+            // width: 170px;
         }
+        
+        &::before{
+            position: absolute;
+            content: "";
+            width: 158px;
+            height: 107px;
+            background: url(../images/png/kamihikouki.webp);
+            background-size: cover;
+            top: -30px;
+            left: -135px;
+
+            @include breakpoint(tablet){
+                width: 55px;
+                height: 38px;
+                left: 50%;
+                top: -35px;
+                transform: translateX(-50%);
+            }
+        }
+        &::after{
+            display: none;
+        }
+
     }
     
 
     &__text1{
-        max-width: 600px;
+        // max-width: 600px;
         margin: 0 auto 140px;
         color: $green27;
         text-align: center;
-        font-size: 4rem;
+        font-size: 2rem;
         font-weight: 600;
 
         @include breakpoint(tablet){
             font-size: 1.4rem;
-            width: 214px;
+            width: 293px;
             margin: 0 auto 43px;
+            text-align: center;
         }
     }
 

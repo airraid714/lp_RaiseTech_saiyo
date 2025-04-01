@@ -5,17 +5,15 @@
     &--global{
         width: 100%;
         height: auto;
-        background: url(../images/png/main-back.png);
-        background-repeat: repeat-y;
-        background-size: cover;
+        background: url(../images/png/main-back.webp) repeat;
     }
 
     &--first-view{
-        background: url(../images/jpg/main-visual.jpg);
+        background: url(../images/jpg/fv.webp);
         background-size: cover;
 
         @include breakpoint(tablet){
-            background: url(../images/png/main-visual-sp.png);
+            background: url(../images/jpg/fv-sp.webp);
             background-size: cover;
 
         }
@@ -23,56 +21,68 @@
     }
 
     &--service{
-        background: url(../images/png/bg_service.png);
+        background: url(../images/png/bg-service.webp);
         background-size: cover;
         background-position: center;
+
     }
     
     &--white{
         background: $whiteFF;
     }
 
-    &--problem{
-        background: url(../images/jpg/onayami.png);
-        background-size: cover;
-
-        @include breakpoint(tablet){
-            background: url(../images/png/onayami-sp.png);
-            background-size: cover;
-    
-        }
+    &--blue{
+        background: $blue2b;
+    }
+    &--blue36{
+        background: $blue36;
+    }
+    &--light-blue{
+        background: $light-blue;
     }
 
-    &--support__banner{
-        background: url(../images/png/support-banner.png);
+    &--problem{
+        background: url(../images/png/bg_problem.webp);
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    &--support--banner{
+        background: url(../images/png/support-banner.webp);
+        background-size: cover;
+    }
+
+    &--support--chat{
+        background: url(../images/png/bg_support_chat.webp);
         background-size: cover;
     }
 
     &--cta{
-        background: url(../images/png/bg-cta.png);
+        background: url(../images/png/bg-cta.webp);
         background-size: cover;
 
         @include breakpoint(tablet){
-            background: url(../images/png/bg-cta-sp.png);
+            background: url(../images/png/bg-cta-sp.webp);
             background-size: cover;    
         }
     }
 
     &--case-iret{
-        background: url(../images/png/bg-case-iret.png);
+        background: url(../images/png/bg-case-iret.webp);
         background-size: cover;
         @include breakpoint(tablet){
-            background: url(../images/png/bg-case-iret-sp.png);
+            background: url(../images/png/bg-case-iret-sp.webp);
             background-size: cover;    
         }
 
     }
 
     &--recruit{
-        background: url(../images/png/bg-recruit.png);
+        background: url(../images/png/bg-recruit.webp);
         background-size: cover;
         @include breakpoint(tablet){
-            background: url(../images/png/bg-recruit-sp.png);
+            background: url(../images/png/bg-recruit-sp.webp);
             background-size: cover;
     
             

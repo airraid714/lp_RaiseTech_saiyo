@@ -2,13 +2,41 @@
 
 .p-faq{
 
-    padding: 111px 0 81px;
+    padding: 140px 0 100px;
+
+    @include breakpoint(tablet){
+        padding: 140px 0 30px;
+    }
 
     h2{
-        margin-bottom: 111px;
+        width: 280px;
+        margin: 0 auto 111px;
 
         @include breakpoint(tablet){
-            margin-bottom: 26px;
+            width: 150px;
+            margin: 0 auto 28px;
+
+        }
+
+        
+
+        &::before{
+            position: absolute;
+            content: "";
+            width: 186px;
+            height: 212px;
+            background: url(../images/png/faq_man.webp);
+            background-size: cover;
+            top: -65px;
+            right: -190px;
+
+            @include breakpoint(tablet){
+                width: 80px;
+                height: 90px;
+                top: -40px;
+                right: -60px;
+    
+            }
         }
     }
     
@@ -35,7 +63,7 @@
 
     }
     &__question{
-        border: 0.735px solid #017972;
+        border: 0.735px solid #CCF5FF;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -46,18 +74,17 @@
             font-size: 0;
             width: 58px;
             height: 58px;
-            background: url(../images/svg/button_faq.svg);
+            background: url(../images/png/button_faq.webp);
+            background-size: cover;
 
             @include breakpoint(tablet){
-                background-size: cover;
                 width: 30px;
                 height: 30px;
             }
         }
     }
     &__answer{
-        background: #C7EEE7;;
-        border: 0.735px solid #C7EEE7;
+        background: #CCF5FF;
         max-height: 0; /* 初期状態で非表示 */
         overflow: hidden;
         transition:  0.5s ease; /* アニメーション効果 */

@@ -6,15 +6,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50px;
     
     @include breakpoint(tablet){
         height: 258px;
+        border-radius: 30px;
     }
     &__box{
         width: 920px; 
         
         @include breakpoint(tablet){
-            width: 292px;
+            width: 308px;
         }
         
         &__text{
@@ -29,9 +31,26 @@
             }
     
             span{
-                color: $l-green9d;
+                color: $yellow;
                 font-weight: 900;
             }
+        }
+
+        strong{
+            display: block;
+            text-align: center;
+            font-size: 2.7rem;
+            font-weight: 600;
+            color: $yellow;
+            margin-bottom: 20px;
+
+            @include breakpoint(tablet){
+                font-size: 1.3rem;
+            }
+        }
+
+        .c-button--request--yellow{
+            margin: auto;
         }
     
     }
@@ -39,10 +58,23 @@
     &--add{
         @extend .p-cta;
         height: 325px;
+        padding-top: 10px;
+        margin-bottom: 136px;
+        border-radius: 0;
+
 
         @include breakpoint(tablet){
             height: 120px;
         }
+
+        .c-button--request--yellow{
+            width: 100%;
+            
+            @include breakpoint(tablet){
+                width: 314px;
+            }
+        }
+
     }
 }
 .p-cta--first{
@@ -51,4 +83,5 @@
         display: block;
         padding-top: 16px;
     }
+
 }

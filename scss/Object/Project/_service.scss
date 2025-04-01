@@ -5,13 +5,16 @@
     justify-content: center;
     align-items: center;
     padding: 124px 0;
+    border-radius: 0 0 80px 80px;
 
     @include breakpoint(tablet){
-        padding: 48px 0;
+        padding: 53px 0 40px;
+        border-radius: 0 0 40px 40px;
+
     }
 
     &__content{
-        max-width: 988px;
+        max-width: 1030px;
 
         h2,h3{
             color: $whiteFF;
@@ -19,55 +22,68 @@
         }
         h2,h3{
             text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
         }
         .c-title--section{
             margin: 0 auto 64px;
             color: $whiteFF;
+            width: 370px;
+
+            &::before{
+                position: absolute;
+                content: "ジョブレイズ";
+                font-size: 2.4rem;
+                color: $whiteFF;
+                letter-spacing: 1.2px;
+                top: -27px;
+                left: 49px;
+
+                @include breakpoint(tablet){
+                    font-size: 1rem;
+                    letter-spacing: 0.5px;
+                    top: -13px;
+                    left: 20px;
+                }
+            }
             &::after{
                 background: $whiteFF;
+                width: 335px;
+                @include breakpoint(tablet){
+                    width: 147px;
+                }
             }
 
             @include breakpoint(tablet){
-                width: 228px;
+                width: 165px;
                 margin: 0 auto 24px;
             }
         }
         h3{
-            font-size: 3.2rem;
+            font-size: 2.4rem;
             font-weight: 500;
             margin: 0 auto 36px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
             @include breakpoint(tablet){
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 margin: 0 auto 13px;
-                width: 180px;
+                max-width: 330px;
                 
-            }
-        }
-        &__text{
-            font-size: 2.4rem;
-            margin: auto;
-            color: $whiteFF;
-            letter-spacing: 1.2px;
-            line-height: 1.5;
-
-            @include breakpoint(tablet){
-                font-size: 1.5rem;
-                width: 270px;
-                letter-spacing: 0.75px;
             }
         }
         ul{
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
             max-width: 756px;
-            margin: 0 auto 46px;
+            margin: 0 auto;
             gap: 30px;
 
             @include breakpoint(tablet){
                 gap: 12px;
-                margin: 0 auto 24px;
+                max-width: 410px;
             }
 
             li{

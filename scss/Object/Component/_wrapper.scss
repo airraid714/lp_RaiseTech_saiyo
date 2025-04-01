@@ -1,0 +1,14 @@
+@use "../../Foundation/_variable.scss" as *;
+
+.c-wrapper{
+
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    &--flex{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}

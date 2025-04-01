@@ -8,6 +8,12 @@ html{
     margin: 0;
 
     scroll-behavior: smooth;
+
+    ::-webkit-scrollbar{
+        width: 0;
+        display: none;
+    }
+
 }
 body{
     width: 100%;
@@ -16,6 +22,7 @@ body{
 }
 img{
     vertical-align: bottom;
+    max-width: 100%;
 }
 ul{
     list-style: none;

@@ -2,24 +2,36 @@
 
 .p-price{
 
-    padding: 72px 0 85px;
+    padding: 72px 0 0;
 
     @include breakpoint(tablet){
-        padding: 66px 0 0;
+        padding: 66px 15px 0;
     }
+
 
     figure{
         width: 100%;
         max-width: 920px;
-        height: 600px;
-        margin: auto;
+        // height: 600px;
+        margin: 0 auto 47px;
 
         @include breakpoint(tablet){
-            height: 306px;
+            margin-bottom: 15px;
         }
         img{
             width: 100%;
             object-fit: cover;
         }
     }
+    p{
+        color: $green27;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+
+        @include breakpoint(tablet){
+            font-size: 0.8rem;
+        }
+    }
+
 }

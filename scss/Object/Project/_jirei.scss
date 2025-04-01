@@ -1,0 +1,100 @@
+@use "../../Foundation/variable" as *;
+
+.p-jirei{
+
+    margin-bottom: 190px;
+
+    @include breakpoint(tablet){
+        margin-bottom: 58px;
+    }
+
+    h2{
+        margin-bottom: 78px;
+
+        @include breakpoint(tablet){
+            margin-bottom: 25px;
+        }
+
+    }
+
+    &__slider-box{
+
+        max-width: 1400px;
+        margin: auto;
+
+        @include breakpoint(tablet){
+            max-width: 400px;
+    
+        }
+    }
+
+    ul{
+        
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .slick-list{
+            width: 90%;
+            position: relative;
+
+            @include breakpoint(tablet){
+                width: 100%;
+            }
+
+        }
+        .slick-prev,.slick-next{
+            position: absolute;
+            width: 83px;
+            height: 83px;
+            background-size: cover;
+            @include breakpoint(tablet){
+                width: 34px;
+                height: 34px;
+            }
+
+        }
+        .slick-prev{
+
+            left: 90px;
+            @include breakpoint(tablet){
+                left: -5px;
+            }
+        }
+        .slick-next{
+            right: 90px;
+            @include breakpoint(tablet){
+                right: -5px;
+
+            }
+
+        }
+
+
+        li{
+            border-radius: 70px 70px 70px 70px;
+            overflow: hidden;
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 1134px;
+            margin: 0 68px;
+
+
+            @include breakpoint(tablet){
+                border-radius: 30px 30px 40px 40px;
+                margin: 0 16px;
+            }
+            
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .slick-slide{
+        height: auto;
+    }
+
+
+}

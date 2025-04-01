@@ -1,19 +1,32 @@
 $(document).ready(function () {
     const initSlick = () => {
+        // .p-jirei 内の slick は常に動作させる
+        $('.p-jirei .slick').each(function () {
+            if (!$(this).hasClass('slick-initialized')) {
+                $(this).slick({
+                    // centerMode: true, // 中央配置
+                    // slidesToShow: 1, // 1枚ずつ表示
+                    // variableWidth: false // 幅を統一
+                });
+            }
+        });
+
+        // 画面幅 1025px 未満なら .p-case__recruit の slick を適用
         if ($(window).width() < 1025) {
-            if (!$('.slick').hasClass('slick-initialized')) {
-                $('.slick').slick({
-                    // centerMode: true,          // 中央にスライドを配置
-                    // centerPadding: '60px 20px',    // 両サイドのスライドの見える幅
-                    // slidesToShow: 1,          // 表示するスライドの数
-                    // infinite: true,           // 無限ループ
-                    arrows: true, 
-                }); // Slickを初期化
-            }
+            $('.p-case__recruit .slick').each(function () {
+                if (!$(this).hasClass('slick-initialized')) {
+                    $(this).slick({
+                        arrows: true,
+                    });
+                }
+            });
         } else {
-            if ($('.slick').hasClass('slick-initialized')) {
-                $('.slick').slick('unslick'); // Slickを解除
-            }
+            // 1025px 以上なら .p-case__recruit の slick を解除
+            $('.p-case__recruit .slick').each(function () {
+                if ($(this).hasClass('slick-initialized')) {
+                    $(this).slick('unslick');
+                }
+            });
         }
     };
 

@@ -5,66 +5,100 @@
 
     &--support{
 
-        color: $green27;
-        
-        h3{
-            font-size: 12rem;
-            color: $l-green9d;
-            font-weight: 900;
-            line-height: 1.5;
-            letter-spacing: 1.3px;
-            position: relative;
+        &--1,&--2,&--3{
 
-            @include breakpoint(tablet){
-                font-size: 4.3rem;
-
-            }
-
-            &::after{
-                position: absolute;
-                content: "";
-                width: 46px;
-                height: 3px;
-                background: $l-green9d;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                display: none;
-
+            color: $green27;
+            left: -100px;
+            h3{
+                font-size: 12rem;
+                color: $l-green9d;
+                font-weight: 900;
+                line-height: 1.5;
+                letter-spacing: 1.3px;
+                position: relative;
+    
                 @include breakpoint(tablet){
-                    display: block;
+                    font-size: 4.3rem;
+    
                 }
-
+    
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 46px;
+                    height: 3px;
+                    background: $l-green9d;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: none;
+    
+                    @include breakpoint(tablet){
+                        display: block;
+                    }
+    
+                }
             }
-        }
-        h4{
-            font-size: 2.7rem;
-
-            @include breakpoint(tablet){
-                font-size: 1rem;
-
+            h4{
+                font-size: 2rem;
+    
+                @include breakpoint(tablet){
+                    font-size: 1rem;
+    
+                }
             }
-        }
-        strong{
-            font-size: 4rem;
-            letter-spacing: 2px;
-            line-height: 1.5;
-            @include breakpoint(tablet){
+            strong{
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+                line-height: 1.5;
+                @include breakpoint(tablet){
+                    font-size: 1.5rem;
+                }
+            }
+            p{
+                max-width: 423px;
                 font-size: 1.5rem;
+                font-weight: 500;
+                line-height: 1.5;
+    
+                @include breakpoint(tablet){
+                    font-size: 1.2rem;
+                    letter-spacing: 0.5px;
+                    line-height: 1.7;
+                }
             }
+            figure{
+                position: absolute;
+            }
+    
         }
-        p{
-            max-width: 423px;
-            font-size: 1.3rem;
-            font-weight: 500;
-            line-height: 1.5;
 
-            @include breakpoint(tablet){
-                font-size: 1.2rem;
-                letter-spacing: 0.5px;
-                line-height: 1.7;
+        &--1{
+
+            figure{
+                width: 291px;
+                right: -180px;
+                top: 127px;
+            }
+            
+        }
+        &--2{
+            left: -200px;
+            figure{
+                width: 291px;
+                right: -170px;
+                top: 35px;
+            }
+
+        }
+        &--3{
+            figure{
+                width: 257px;
+                right: -170px;
+                top: -127px;
             }
         }
+
         
         
     }
@@ -111,6 +145,7 @@
                     border-bottom: 1px solid #EDEFF3;
                     display: flex;
                     align-items: center;
+                    padding: 0 20px;
 
                     @include breakpoint(tablet){
                         font-size: 1.2rem;
@@ -118,8 +153,13 @@
                         
                     }
                     p{
-                        width: 180px;
                         margin: auto;
+
+                        @include breakpoint(tablet){
+                            width: 180px;
+    
+                        }
+
                     }
                     
                 }

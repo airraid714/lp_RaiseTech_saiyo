@@ -3,220 +3,251 @@
 .c-button{
 
     &--request{
-        display: block;
-        background: #F24535;
-        color: $whiteFF;
         display: flex;
+        background: #FFA01C;
+        color: $whiteFF;
         align-items: center;
 
         &--header{
             @extend .c-button--request;
-            height: 53px;
-            width: 269px;
-            border-radius: 3.7px;
-            font-size: 1.7rem;
-            box-shadow: 0px -2.662px 0px 0px rgba(0, 0, 0, 0.25) inset;
-
+            height: 52px;
+            width: 237px;
+            border-radius: 40px;
+            font-size: 1.9rem;
+            box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+            position: relative;
             @include breakpoint(tablet){
-                height: 30px;
-                width: 147px;
-                border-radius: 2px;
-                font-size: 0.9rem;
+                height: 38px;
+                width: 154px;
+                font-size: 1.2rem;
 
             }
-            p{
-                margin: auto 30px auto auto;
-                position: relative;
+
+            &::after{
+                position: absolute;
+                content: "";
+                background: url(../images/png/icon_play.webp);
+                background-size: contain;
+                width: 19px;
+                height: 20px;
+                top: 16px;
+                right: 23px;
+
                 @include breakpoint(tablet){
-                    margin: auto 20px 8px auto;
+                    width: 17px;
+                    height: 18px;
+                    top: 9px;
+                    right: 12px;
                 }
+            }
 
-                &::before{
-                    position: absolute;
-                    content: "";
-                    background: url(../images/png/operator.png);
-                    background-size: cover;
-                    width:   72px;
-                    height:  64px;
-                    top:    -32px;
-                    left:   -86px;
-                    display: block;
+            figure{
+                margin-left: 28px;
 
-                    @include breakpoint(tablet){
-                        width: 40px;
-                        height: 36px;
-                        top: -16px;
-                        left: -47px
+                @include breakpoint(tablet){
+                    width: 101px;
+                    height: 20px;
+                    margin-left: 19px;
+
+                    img{
+                        width: 100%;
                     }
                 }
             }
-            span{
-                font-size: 1.1rem;
+
+        }
+
+        &--yellow{
+            @extend .c-button--request;
+            display: block;
+            text-align: center;
+            max-width: 620px; 
+            height: 116px;
+            border-radius: 86px;
+            padding: 8px 66px;
+            color: $whiteFF;
+            font-weight: 700;
+            box-shadow: 0px -7.883px 0px 0px rgba(0, 0, 0, 0.25) inset;
+            position: relative;
+
+            @include breakpoint(tablet){
+                width: 314px;
+                height: 59px;
+                border-radius: 43px;
+                box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+                padding: 6px 47px;
+
+            }
+
+            figure{
+                width: 436px;
+
                 @include breakpoint(tablet){
-                    font-size:  .6rem
+                    width: 206px;
+                }
+                img{
+                    width: 100%;
                 }
             }
-        }
+            &::before{
+                position: absolute;
+                content: "";
+                background: url(../images/svg/muryou.svg);
+                background-size: cover;
+                width: 74px;
+                height: 77px;
+                top: -16px;
+                left: -10px;
 
-        &--first-view{
-            @extend .c-button--request;
-            width: 398px; 
-            padding: 39px 34px 16px;
-            border-radius: 8px;
-            font-size: 3rem;
-            box-shadow: 0px -2.391px 0px 0px rgba(0, 0, 0, 0.25) inset;
-            p{
-                margin-left: auto;
-                position:   relative;
-                &::before{
-                    position: absolute;
-                    content: "";
-                    background: url(../images/png/operator.png);
-                    background-size: cover;
-                    width: 112px;
-                    height: 102px;
-                    top: -46px;
-                    left: -118px;
-                    display: block;
+                @include breakpoint(tablet){
+                    width: 52px;
+                    height: 52px;
+
                 }
-                &::after{
-                    position:absolute;
-                    content: "";
-                    background: url(../images/png/button-parts.png);
-                    background-size: cover;
-                    width: 254px;
-                    height: 25px;
-                    top: -28px;
-                    left: -13px;
-                }                
-            }
-            span{
-                font-size: 2.2rem;
+                
             }
 
-            @include breakpoint(sp){
-                transform: scale(0.7);
-            }
+            &::after{
+                position:absolute;
+                content: "";
+                background: url(../images/png/icon_play.webp);
+                background-size: cover;
+                width: 50px;
+                height: 51px;
+                top: 28px;
+                right: 45px;
+
+                @include breakpoint(tablet){
+                    background-size: contain;
+                    width: 26px;
+                    height: 26px;
+                    top: 14px;
+                    right: 24px;
+                }
+            }                
+
+
+
 
         }
 
-        &--cta{
-            @extend .c-button--request;
-            width: 590px;
-            height: 140px;
-            border-radius: 14.5px;
-            box-shadow: 0px -3.63px 0px 0px rgba(0, 0, 0, 0.25) inset;
-            background: #F24535;
-            margin: auto;
+        // &--cta{
+        //     @extend .c-button--request;
+        //     width: 590px;
+        //     height: 140px;
+        //     border-radius: 14.5px;
+        //     box-shadow: 0px -3.63px 0px 0px rgba(0, 0, 0, 0.25) inset;
+        //     background: #F24535;
+        //     margin: auto;
         
-            @include breakpoint(tablet){
-                width: 254px;
-                height: 60px;
-                border-radius: 6px;
-            }
+        //     @include breakpoint(tablet){
+        //         width: 254px;
+        //         height: 60px;
+        //         border-radius: 6px;
+        //     }
 
-            div{
-                width: 100%;
+        //     div{
+        //         width: 100%;
 
-                strong{
-                    font-size: 1.7rem;
-                    display: inline-block;
-                    margin-left: 200px;
-                    font-weight: 600;
-                    position: relative;
+        //         strong{
+        //             font-size: 1.7rem;
+        //             display: inline-block;
+        //             margin-left: 200px;
+        //             font-weight: 600;
+        //             position: relative;
 
-                    @include breakpoint(tablet){
-                        font-size: .7rem;
-                        margin-left: 110px;
-                    }
+        //             @include breakpoint(tablet){
+        //                 font-size: .7rem;
+        //                 margin-left: 110px;
+        //             }
 
-                    &::before, &::after{
-                        width: 20px;
-                        height: 2px;
-                        position: absolute;
-                        content: "";
-                        background: $whiteFF;
-                        top: 12px;
+        //             &::before, &::after{
+        //                 width: 20px;
+        //                 height: 2px;
+        //                 position: absolute;
+        //                 content: "";
+        //                 background: $whiteFF;
+        //                 top: 12px;
 
-                        @include breakpoint(tablet){
-                            width: 9px;
-                            height: 1px;
-                            top: 5px;
-                        }
+        //                 @include breakpoint(tablet){
+        //                     width: 9px;
+        //                     height: 1px;
+        //                     top: 5px;
+        //                 }
     
-                    }
-                    &::before{
-                        left: -24px;  
-                        transform: rotate(53deg);
+        //             }
+        //             &::before{
+        //                 left: -24px;  
+        //                 transform: rotate(53deg);
 
-                        @include breakpoint(tablet){
-                            left: -14px;
+        //                 @include breakpoint(tablet){
+        //                     left: -14px;
                             
-                        }
+        //                 }
 
-                    }
-                    &::after{
-                        right: -24px;
-                        transform: rotate(-53deg);
+        //             }
+        //             &::after{
+        //                 right: -24px;
+        //                 transform: rotate(-53deg);
 
-                        @include breakpoint(tablet){
-                          right: -10px;
-                        }
+        //                 @include breakpoint(tablet){
+        //                   right: -10px;
+        //                 }
 
-                    }
-                }
-                p{
-                    font-size: 4.5rem;
-                    font-weight: 600;
-                    display: inline-block;
-                    margin-left: 140px;
-                    position: relative;
-                    letter-spacing: -2px;
+        //             }
+        //         }
+        //         p{
+        //             font-size: 4.5rem;
+        //             font-weight: 600;
+        //             display: inline-block;
+        //             margin-left: 140px;
+        //             position: relative;
+        //             letter-spacing: -2px;
 
-                    @include breakpoint(tablet){
-                        font-size: 2rem;
-                        margin-left: 60px;
-                        letter-spacing: 0;
+        //             @include breakpoint(tablet){
+        //                 font-size: 2rem;
+        //                 margin-left: 60px;
+        //                 letter-spacing: 0;
 
-                    }
-
-    
-                    &::before{
-                        position: absolute;
-                        content: "";
-                        background: url(../images/png/operator.png);
-                        background-size: cover;
-                        width:   150px;
-                        height:  145px;
-                        top:    -60px;
-                        left:   -160px;
-                        display: block;
-
-                        @include breakpoint(tablet){
-                            width: 65px;
-                            height: 63px;
-                            top: -30px;
-                            left: -73px;
-                        }
-    
-                    }
-    
-                    span{
-                        font-size: 3.4rem;
-
-                        @include breakpoint(tablet){
-                            font-size: 1.4rem;
-                        }
-    
-                    }
-                }
+        //             }
 
     
+        //             &::before{
+        //                 position: absolute;
+        //                 content: "";
+        //                 background: url(../images/png/operator.webp);
+        //                 background-size: cover;
+        //                 width:   150px;
+        //                 height:  145px;
+        //                 top:    -60px;
+        //                 left:   -160px;
+        //                 display: block;
+
+        //                 @include breakpoint(tablet){
+        //                     width: 65px;
+        //                     height: 63px;
+        //                     top: -30px;
+        //                     left: -73px;
+        //                 }
     
-            }
+        //             }
+    
+        //             span{
+        //                 font-size: 3.4rem;
+
+        //                 @include breakpoint(tablet){
+        //                     font-size: 1.4rem;
+        //                 }
+    
+        //             }
+        //         }
+
+    
+    
+        //     }
 
             
-        }
+        // }
 
     }
 
@@ -255,7 +286,7 @@
             display: block;
             width: 100%;
             height: 2px;
-            background: $green01;
+            background: #2BB8D9;
             border-radius: 2px;
             font-size: 0;
             position: relative;
@@ -265,7 +296,7 @@
                 height: 100%;
                 position: absolute;
                 content: "";
-                background: $green01;
+                background: #2BB8D9;
                 left: 0;
                 transition: .3s;
             }
@@ -319,5 +350,33 @@
         border-radius: 30px;
         color: $whiteFF;
         background: #B3B3B3;
+    }
+
+    &--pop{
+        width: 35px;
+        height: 35px;
+        background: #EAEAEA;
+        border-radius: 5px;
+        position:  relative;
+        padding: 0;
+        display: block;
+        margin-left: auto;
+
+        &::before,&::after{
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background: #273236;
+            left: 5px;
+
+        }
+
+        &::before{
+            transform: rotate(-45deg) ;
+        }
+        &::after{
+            transform: rotate(45deg) ;
+        }
     }
 } 

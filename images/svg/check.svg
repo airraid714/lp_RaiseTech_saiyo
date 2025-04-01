@@ -1,8 +1,4 @@
-<svg width="70" height="69" viewBox="0 0 70 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 57">
-<circle id="Ellipse 17" cx="35" cy="34.2973" r="34.1694" fill="#017972"/>
-<g id="Group 58">
-<path id="Line 25" d="M15.1599 35.0321L33.1518 49.8237L56.4824 21.7166" stroke="white" stroke-width="5.87861" stroke-linecap="round"/>
-</g>
-</g>
+<svg width="186" height="186" viewBox="0 0 186 186" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="93" cy="93" r="93" fill="#2BB8D9"/>
+<path d="M39.0005 95L87.9697 135.259L151.469 58.7587" stroke="white" stroke-width="16" stroke-linecap="round"/>
 </svg>

@@ -9,67 +9,78 @@
         width: 308px;
     }
 
+    label{
+        margin-bottom: 14px;
+        display: inline-block;
+
+        @include breakpoint(tablet){
+            margin-bottom: 5px;
+
+        }
+    }
+
     label, input{
         color: $green27;
         font-size: 3.2rem;
         font-weight: 600;
         line-height: 0.9;
-        width: 226px;
         position: relative;
 
         @include breakpoint(tablet){
-            font-size: 1rem;
-            width: 74px;
+            font-size: 1.1rem;
             
         }
     }
     &__wrapper{
 
-        display: flex;
-        align-items: flex-end;
-        gap: 53px;
         margin-bottom: 32px;
 
         @include breakpoint(tablet){
-            gap: 24px;
+            margin-bottom: 14px;
         }
 
-        label{
-
-            &::before{
-                position: absolute;
-                content: "必須";
-                color: $whiteFF;
-                font-size: 1.6rem;
-                background: #D32F2F;
-                padding: 4px 8px;
-                top: -50px;
-                left: 0;
-
-                @include breakpoint(tablet){
-                    font-size: 0.5rem;
-                    padding: 3px 3px 1px 4px;
-                    top: -14px;
-                }
-            }    
-        }
 
         input{
-            width: 640px;
+            width: 100%;
             height: 80px;
-            border: 3px solid #273236;
             padding: 10px 20px;
+            background: #E2E2E2;
 
             @include breakpoint(tablet){
-                width: 208px;
                 height: 26px;
-                border: 1px solid #273236;
                 padding: 5px 8px;
             }
             
 
         }
 
+    }
+    
+    &__label--required{
+
+
+        &::before{
+            position: absolute;
+            content: "＊";
+            color: $whiteFF;
+            font-size: 1.6rem;
+            background: $blue2b;
+            text-align: center;
+            padding: 13px 0;
+            width: 49px;
+            height: 39px;
+            top: -6px;
+            right: -63px;
+
+            @include breakpoint(tablet){
+                font-size: 0.6rem;
+                width: 16px;
+                height: 12px;
+                padding: 4px 0;
+                top: -1px;
+                right: -19px;
+            }
+        }    
     }
 
     &__name{
@@ -121,12 +132,10 @@
         input{
             width: 280px;
             height: 80px;
-            border: 3px solid #273236;
 
             @include breakpoint(tablet){
                 width: 94px;
                 height: 26px;
-                border: 1px solid #273236;
             }
         
         }

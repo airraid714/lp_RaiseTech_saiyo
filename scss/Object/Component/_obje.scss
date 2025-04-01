@@ -5,4 +5,46 @@
     &--problem{
 
     }
+
+    &--triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-right: 125px solid transparent;
+        border-left: 125px solid transparent;
+        border-top: 80px solid $blue2b;
+        border-bottom: 0;
+    }
+
+    &--banner{
+        width: 40%;
+        position: fixed;
+        right: -100%;
+        bottom: 0;
+        z-index: 500000;
+        max-width: 440px;
+        transition: right 0.5s ease-in-out;
+
+
+        @include breakpoint(tablet){
+            transition: bottom 0.5s ease-in-out;
+            right: inherit;
+            bottom: -100%;
+            width: 100%;
+            max-width: 500px;    
+
+
+        }
+
+        &.is-active{
+            right: 0;
+            bottom: 0;
+
+            @include breakpoint(tablet){
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+            }
+        }
+    }
 }

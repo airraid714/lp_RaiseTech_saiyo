@@ -1,22 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
     const list = document.querySelector(".p-achieve__list");
     const items = document.querySelectorAll(".p-achieve__list__item");
-    const itemWidth = items[0].offsetWidth + 40; // アイテムの幅 + gap
-    const totalWidth = itemWidth * items.length;
 
-    // リストを複製してスムーズなループを作成
-    list.innerHTML += list.innerHTML; // リスト内容を複製
+    if (!list || items.length === 0) return;
+
+    const itemWidth = items[0].offsetWidth + 40; // アイテム幅 + gap
+    const itemCount = items.length;
+
+    // リストを複製して無限ループ用に2倍に
+    list.innerHTML += list.innerHTML;
 
     let position = 0;
 
     function animate() {
-        position -= 0.3; // アニメーション速度
-        if (Math.abs(position) >= totalWidth) {
-            position = 0; // スムーズにリセット
-        }
-        list.style.transform = `translateX(${position}px)`;
-        requestAnimationFrame(animate); // フレーム単位で更新
+      position -= 0.3;
+
+      // 1セット分の幅を超えたら巻き戻す（シームレスに）
+      if (Math.abs(position) >= itemWidth * itemCount) {
+        position = 0;
+      }
+
+      list.style.transform = `translateX(${position}px)`;
+      requestAnimationFrame(animate);
     }
 
     animate();
@@ -111,84 +116,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
 
-    
-
-    // const form = document.getElementById("myForm");
-    // const inputs = form.querySelectorAll("input[type='text'], input[type='email'], input[type='tel']");
-    // const checkbox = document.getElementById("privacy");
-    // const submitButton = document.querySelector(".c-button--form-submit");
-
-    // // 入力チェック関数
-    // const validateForm = () => {
-    //     const allFilled = Array.from(inputs).every(input => input.value.trim() !== ""); // 全てのinput要素が入力済みか確認
-    //     const isCheckboxChecked = checkbox.checked; // チェックボックスの状態を確認
-
-    //     // 送信ボタンの有効/無効を切り替え
-    //     if (allFilled && isCheckboxChecked) {
-    //         submitButton.disabled = false;
-    //         submitButton.classList.add("enabled"); // スタイル追加 (任意)
-    //     } else {
-    //         submitButton.disabled = true;
-    //         submitButton.classList.remove("enabled"); // スタイル削除 (任意)
-    //     }
-    // };
-
-    // // 各入力要素にイベントリスナーを登録
-    // inputs.forEach(input => {
-    //     input.addEventListener("input", validateForm);
-    // });
-
-    // // チェックボックスにイベントリスナーを登録
-    // checkbox.addEventListener("change", validateForm);
-
-    // // ページ読み込み時の初期状態をチェック
-    // validateForm();
-
-//     const form = document.getElementById("myForm");
-//     const inputs = form.querySelectorAll("input[type='text'], input[type='email'], input[type='tel']");
-//     const checkbox = document.getElementById("privacy");
-//     const submitButton = document.querySelector(".c-button--form-submit");
-
-//     // 入力チェック関数
-//     const validateForm = () => {
-//         const allFilled = Array.from(inputs).every(input => input.value.trim() !== "");
-//         const isCheckboxChecked = checkbox.checked;
-
-//         if (allFilled && isCheckboxChecked) {
-//             submitButton.disabled = false;
-//             submitButton.classList.add("enabled");
-//         } else {
-//             submitButton.disabled = true;
-//             submitButton.classList.remove("enabled");
-//         }
-//     };
-
-//     // 各入力要素にイベントリスナーを登録
-//     inputs.forEach(input => {
-//         input.addEventListener("input", validateForm);
-//     });
-
-//     // チェックボックスにイベントリスナーを登録
-//     checkbox.addEventListener("change", validateForm);
-
-//     // ページ読み込み時の初期状態をチェック
-//     validateForm();
-
-//     // フォーム送信時のreCAPTCHA処理
-//     form.addEventListener('submit', function(e) {
-//         e.preventDefault();
-//         if (!submitButton.disabled) {
-//             grecaptcha.ready(function() {
-//                 grecaptcha.execute('6LeriJ8qAAAAAH86YNM6-FC1JUYSnJB8kbNbKWiL', {action: 'submit'}).then(function(token) {
-//                     document.getElementById('recaptchaResponse').value = token;
-//                     form.submit();
-//                 });
-//             });
-//         }
-//     });
 
     
 });
+
+// フォームの制御
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("myForm");
+    const inputs = form.querySelectorAll("input[type='text'], input[type='email'], input[type='tel']");
+    const checkbox = document.getElementById("privacy");
+    const submitButton = document.querySelector(".c-button--form-submit");
+
+    // 入力チェック関数
+    const validateForm = () => {
+        const allFilled = Array.from(inputs).every(input => input.value.trim() !== "");
+        const isCheckboxChecked = checkbox.checked;
+
+        if (allFilled && isCheckboxChecked) {
+            submitButton.disabled = false;
+            submitButton.classList.add("enabled");
+        } else {
+            submitButton.disabled = true;
+            submitButton.classList.remove("enabled");
+        }
+    };
+
+    // 各入力要素にイベントリスナーを登録
+    inputs.forEach(input => {
+        input.addEventListener("input", validateForm);
+    });
+
+    // チェックボックスにイベントリスナーを登録
+    checkbox.addEventListener("change", validateForm);
+
+    // ページ読み込み時の初期状態をチェック
+    validateForm();
+
+    // フォーム送信時のreCAPTCHA処理
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!submitButton.disabled) {
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LeeUJoqAAAAALpN6gNPnGKSEgyYSS38V8NqedLh', {action: 'submit'}).then(function(token) {
+                    document.getElementById('recaptchaResponse').value = token;
+                    form.submit();
+                });
+            });
+        }
+    });
+    
+});
+
 
 // カスタムスクロールバーの挙動    
 document.addEventListener("DOMContentLoaded", () => {
@@ -219,5 +198,49 @@ document.addEventListener("DOMContentLoaded", () => {
         updateThumb();
     } else {
         console.error("スクロールバーまたはthumb要素が見つかりません。");
+    }
+});
+
+
+//キャンペーンバナーの挙動
+document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.querySelector('.c-obje--banner');
+    const campaign = document.querySelector('.p-campaign');
+    const closeBtn = document.querySelector('.c-button--pop');
+  
+    let isBannerClosed = false;
+    let hasBannerShown = false; // ✅ 一度表示したかどうか
+    let isInCampaign = false;
+  
+    function handleScroll() {
+      if (!isBannerClosed && !hasBannerShown && !isInCampaign && window.scrollY >= window.innerHeight) {
+        banner.classList.add('is-active');
+        hasBannerShown = true; // ✅ 一度だけ表示
+      }
+    }
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    const campaignObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          isInCampaign = true;
+          banner.classList.remove('is-active');
+        } else {
+          isInCampaign = false;
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1
+    });
+  
+    if (campaign) campaignObserver.observe(campaign);
+  
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        banner.classList.remove('is-active');
+        isBannerClosed = true;
+      });
     }
 });

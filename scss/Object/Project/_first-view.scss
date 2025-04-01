@@ -3,13 +3,19 @@
 .p-first-view{
     
     width: 100%;
-    max-height: 650px;
-
-    padding-top: 59px;
+    // height: 880px;
+    // aspect-ratio: 1440 / 880; /* アスペクト比を指定 */
+    height: 80vh;
+    padding-top: clamp(85px, 10vh, 140px);
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
     @include breakpoint(tablet){
         padding-top: 20px;
-        aspect-ratio: 375 / 443; /* アスペクト比 */
+        aspect-ratio: 375 / 450; /* アスペクト比 */
+        height: 450px;
     }
-    
-   
+
 }
